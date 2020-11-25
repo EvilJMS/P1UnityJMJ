@@ -29,7 +29,13 @@ public class RoomSpawner : MonoBehaviour {
 			if(openingDirection == 1){
 				// Need to spawn a room with a BOTTOM door.
 				rand = Random.Range(0, templates.bottomRooms.Length);
-				Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+				if (openingDirection==0)
+				{
+					Instantiate(templates.bottomRooms[0],transform.position, templates.bottomRooms[0].transform.rotation);
+				} else
+				{
+					Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+				}
 			} else if(openingDirection == 2){
 				// Need to spawn a room with a TOP door.
 				rand = Random.Range(0, templates.topRooms.Length);
@@ -39,11 +45,21 @@ public class RoomSpawner : MonoBehaviour {
 			} else if(openingDirection == 3){
 				// Need to spawn a room with a LEFT door.
 				rand = Random.Range(0, templates.leftRooms.Length);
-				Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
+				if(openingDirection==0){
+					Instantiate(templates.leftRooms[0], transform.position, templates.leftRooms[0].transform.rotation);
+				} else
+				{
+					Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);	
+				}
 			} else if(openingDirection == 4){
 				// Need to spawn a room with a RIGHT door.
 				rand = Random.Range(0, templates.rightRooms.Length);
-				Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+				if(openingDirection==0){
+						Instantiate(templates.rightRooms[0], transform.position, templates.rightRooms[0].transform.rotation);
+				} else
+				{
+					Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);	
+				}
 			}
 			spawned = true;
 		}
@@ -54,7 +70,7 @@ public class RoomSpawner : MonoBehaviour {
 			if(other.GetComponent<RoomSpawner>().spawned == false && spawned == false){
 				Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
 				Destroy(gameObject);
-			} 
+			}
 			spawned = true;
 		}
 	}
