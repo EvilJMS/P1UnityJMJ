@@ -14,6 +14,7 @@ public class RoomSpawner : MonoBehaviour {
 	private RoomTemplates templates;
 	private int rand;
 	public bool spawned = false;
+	public bool spawnedItemRoom = false;
 
 	public float waitTime = 4f;
 
@@ -28,13 +29,21 @@ public class RoomSpawner : MonoBehaviour {
 		if(spawned == false){
 			if(openingDirection == 1){
 				// Need to spawn a room with a BOTTOM door.
-				rand = Random.Range(0, templates.bottomRooms.Length);
+				rand = Random.Range(0, templates.bottomRooms.Length-1);
 				if (openingDirection==0)
 				{
 					Instantiate(templates.bottomRooms[0],transform.position, templates.bottomRooms[0].transform.rotation);
 				} else
 				{
-					Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+					if (rand==0&&spawnedItemRoom==false)
+					{
+						Instantiate(templates.bottomRooms[5], transform.position, templates.bottomRooms[rand].transform.rotation);
+						spawnedItemRoom=true;
+					}
+					else
+					{
+						Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+					}
 				}
 			} else if(openingDirection == 2){
 				// Need to spawn a room with a TOP door.

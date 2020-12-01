@@ -53,26 +53,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\AddRoom.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\README.cs" />
      <Compile Include="Assets\Scripts\RoomSpawner.cs" />
      <Compile Include="Assets\Scripts\RoomTemplates.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ02/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ02/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ02/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ02/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ02/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/alumne/Unity/Hub/Editor/2018.4.28f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -279,7 +279,7 @@
  <HintPath>/home/alumne/Unity/Hub/Editor/2018.4.28f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ02/Roguelike 2d JMJ Games/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/home/alumne/Documentos/UnityProjects/test/P1UnityJMJ/Roguelike 2d JMJ Games/Library/PackageCache/com.unity.analytics@3.2.3/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/home/alumne/Unity/Hub/Editor/2018.4.28f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
