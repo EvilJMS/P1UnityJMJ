@@ -53,7 +53,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RoomScript.cs" />
      <Compile Include="Assets\Scripts\AddRoom.cs" />
+     <Compile Include="Assets\Scripts\CameraIsaac.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\README.cs" />
