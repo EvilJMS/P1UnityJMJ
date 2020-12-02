@@ -17,8 +17,9 @@ public class CameraIsaac : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position!=new Vector3(CurrentRoom.transform.x,CurrentRoom.transform.y,-10)){
+        if(transform.position!=new Vector3(CurrentRoom.transform.position.x,CurrentRoom.transform.position.y,-10))
            transform.position = Vector3.SmoothDamp(transform.position, CurrentRoom.transform.position, ref ref1, smoothness); 
-        }
+       
     }
 }
+

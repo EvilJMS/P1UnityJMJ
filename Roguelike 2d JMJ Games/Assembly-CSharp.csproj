@@ -53,12 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\RoomScript.cs" />
      <Compile Include="Assets\Scripts\AddRoom.cs" />
      <Compile Include="Assets\Scripts\CameraIsaac.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\README.cs" />
+     <Compile Include="Assets\Scripts\RoomScript.cs" />
      <Compile Include="Assets\Scripts\RoomSpawner.cs" />
      <Compile Include="Assets\Scripts\RoomTemplates.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
