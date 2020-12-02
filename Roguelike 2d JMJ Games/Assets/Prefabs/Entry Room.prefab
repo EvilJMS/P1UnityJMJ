@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 0
   spawned: 0
+  spawnedItemRoom: 0
   waitTime: 4
 --- !u!61 &61273959071891808
 BoxCollider2D:
@@ -142,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 0
   spawned: 0
+  spawnedItemRoom: 0
   waitTime: 4
 --- !u!61 &61342237357115354
 BoxCollider2D:
@@ -237,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 0
   spawned: 0
+  spawnedItemRoom: 0
   waitTime: 4
 --- !u!61 &61153349465182346
 BoxCollider2D:
@@ -662,6 +665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openingDirection: 0
   spawned: 0
+  spawnedItemRoom: 0
   waitTime: 4
 --- !u!61 &61527779136517890
 BoxCollider2D:

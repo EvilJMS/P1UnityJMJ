@@ -35,15 +35,7 @@ public class RoomSpawner : MonoBehaviour {
 					Instantiate(templates.bottomRooms[0],transform.position, templates.bottomRooms[0].transform.rotation);
 				} else
 				{
-					if (rand==0&&spawnedItemRoom==false)
-					{
-						Instantiate(templates.bottomRooms[5], transform.position, templates.bottomRooms[rand].transform.rotation);
-						spawnedItemRoom=true;
-					}
-					else
-					{
 						Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
-					}
 				}
 			} else if(openingDirection == 2){
 				// Need to spawn a room with a TOP door.
