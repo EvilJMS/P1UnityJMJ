@@ -9,17 +9,40 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     public Animator animator;
 
+    public GameObject bulletPrefab;
+    public float BulletSpeed;
+    private float lastFired;
+    public float fireDelay;
+
+
     // Update is called once per frame
     void Update()
     {
+      float shootHor = Input.GetAxisRaw("HorizontalShoot");
+      float shootVer = Input.GetAxisRaw("VerticalShoot");
+
     movement.x = Input.GetAxisRaw("Horizontal");
     movement.y = Input.GetAxisRaw("Vertical");
     animator.SetFloat("Horizontal", movement.x);
     animator.SetFloat("Vertical", movement.y);
     animator.SetFloat("Speed", movement.sqrMagnitude);
+    if ((shootHor!=0 || shootVer!=0)&& Time.time > lastFired + fireDelay) {
+      Shoot(shootHor,shootVer);
+      lastFired = Time.time;
+    }
 
 
     }
+    void Shoot(float x, float y){
+      GameObject bullet2 = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
+      bullet2.AddComponent<Rigidbody2D>().gravityScale = 0;
+      bullet2.GetComponent<Rigidbody2D>().velocity = new Vector3(
+      (x < 0) ? Mathf.Floor(x)* BulletSpeed : Mathf.Ceil(x) * BulletSpeed,
+      (y < 0) ? Mathf.Floor(y)* BulletSpeed : Mathf.Ceil(y) * BulletSpeed,
+      0
+      );
+    }
+
 
     void FixedUpdate()
     {
