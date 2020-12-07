@@ -12,7 +12,27 @@ public class HealthSystem : MonoBehaviour
     public Sprite corazonCompleto;
     public Sprite corazonVacio;
 
+    private void Start()
+    {
+        DibujarCorazones();
+    }
+
     void Update()
+    {
+        
+    }
+
+    public void TakeDamage(int damage)
+    {
+        vida -= damage;
+        if (vida < 0)
+        {
+            vida = 0;
+        }
+        DibujarCorazones();
+    }
+
+    void DibujarCorazones()
     {
         if (vida > numCorazones)
         {
@@ -21,7 +41,7 @@ public class HealthSystem : MonoBehaviour
 
         for (int i = 0; i < corazones.Length; i++)
         {
-            if (i<vida)
+            if (i < vida)
             {
                 corazones[i].sprite = corazonCompleto;
             }
@@ -30,7 +50,7 @@ public class HealthSystem : MonoBehaviour
                 corazones[i].sprite = corazonVacio;
             }
 
-            if (i<numCorazones)
+            if (i < numCorazones)
             {
                 corazones[i].enabled = true;
             }
@@ -40,4 +60,6 @@ public class HealthSystem : MonoBehaviour
             }
         }
     }
+
+    
 }

@@ -4,23 +4,15 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public int damage;
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
         
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Attack(Collider2D colision)
-    {
-        if (colision.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            
+            collision.gameObject.GetComponent<HealthSystem>().TakeDamage(damage);
         }
     }
 }
