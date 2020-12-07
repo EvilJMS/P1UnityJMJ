@@ -8,6 +8,10 @@ TagManager:
   - SpawnPoint
   - ClosedWall
   - Bullet
+  - LeftDoor
+  - RightDoor
+  - UpDoor
+  - DownDoor
   layers:
   - Default
   - TransparentFX
