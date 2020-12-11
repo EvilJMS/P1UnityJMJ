@@ -39,8 +39,6 @@ public class MoveCamera : MonoBehaviour
           on=false;
     		}
       }
-      else if(on == false){
-        on=true;
-      }
+      
   	}
 }

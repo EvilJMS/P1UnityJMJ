@@ -511,7 +511,6 @@ Transform:
   - {fileID: 4557685592762260}
   - {fileID: 4503023149602972}
   - {fileID: 4115418918145482757}
-  - {fileID: 3006419907759551882}
   - {fileID: 7332624841554059623}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -664,7 +663,7 @@ Transform:
   m_Children:
   - {fileID: 5318695131377883648}
   m_Father: {fileID: 4042754870233708}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!156049354 &8152580505766774301
 Grid:
@@ -3272,86 +3271,6 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
---- !u!1001 &4524949363994575287
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 4042754870233708}
-    m_Modifications:
-    - target: {fileID: 706909507393047064, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_Name
-      value: MoveCameraObject
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3827179788594795502, guid: c989505b030ef82c584ae37dfc022515,
-        type: 3}
-      propertyPath: on
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c989505b030ef82c584ae37dfc022515, type: 3}
---- !u!4 &3006419907759551882 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1689742126233777213, guid: c989505b030ef82c584ae37dfc022515,
-    type: 3}
-  m_PrefabInstance: {fileID: 4524949363994575287}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5944955370851708597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3359,6 +3278,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4042754870233708}
     m_Modifications:
+    - target: {fileID: 5907960544689505916, guid: a7ef5a549886ae185835809e236ab1d7,
+        type: 3}
+      propertyPath: on
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
         type: 3}
       propertyPath: m_LocalPosition.x
