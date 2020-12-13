@@ -3282,6 +3282,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4186792774406478}
     m_Modifications:
+    - target: {fileID: 3624744318883359177, guid: a7ef5a549886ae185835809e236ab1d7,
+        type: 3}
+      propertyPath: cameras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624744318883359177, guid: a7ef5a549886ae185835809e236ab1d7,
+        type: 3}
+      propertyPath: cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 2779967825369655192}
     - target: {fileID: 5907960544689505916, guid: a7ef5a549886ae185835809e236ab1d7,
         type: 3}
       propertyPath: on
@@ -3367,6 +3377,12 @@ PrefabInstance:
 --- !u!4 &2316776306449970850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5456824652958316562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2779967825369655192 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7867479716691763082, guid: a7ef5a549886ae185835809e236ab1d7,
     type: 3}
   m_PrefabInstance: {fileID: 5456824652958316562}
   m_PrefabAsset: {fileID: 0}
