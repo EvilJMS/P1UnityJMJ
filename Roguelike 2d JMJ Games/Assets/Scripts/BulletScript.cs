@@ -21,10 +21,10 @@ public class BulletScript : MonoBehaviour
     }
 
     
-    void OnCollisionEnter2D(collision){
-      if (collision.gameObject.CompareTag("Enemy"))
+    void OnCollisionEnter2D(Collision2D collision){
+      if (collision.CompareTag("Enemy"))
       {
-          collision.gameObject.getComponent<EnemyHealth>().LowHP(damage);
+          collision.getComponent<EnemyHealth>().LowHP(damage);
       }
     }
 }
