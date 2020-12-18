@@ -23,12 +23,32 @@ public class BulletScript : MonoBehaviour
       Destroy(gameObject);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+  //  void OnCollisionEnter2D(Collision2D collision)
+  //  {
+  //      
+  //     if (collision.gameObject.CompareTag("Enemy"))
+  //      {
+  //          collision.gameObject.GetComponent<EnemyHealth>().LowHP(damage);
+  //          Destroy(gameObject);
+  //      }
+  //
+  //      if (collision.gameObject.CompareTag("Wall"))
+  //     {
+  //          Destroy(gameObject);
+  //      }
+  //  }
+
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collider.gameObject.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<EnemyHealth>().LowHP(damage);
+            collider.gameObject.GetComponent<EnemyHealth>().LowHP(damage);
+            Destroy(gameObject);
+        }
+
+        if (collider.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
         }
     }
 
