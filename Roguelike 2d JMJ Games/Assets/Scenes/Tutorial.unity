@@ -563,6 +563,16 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 973189507390061938, guid: 5bfb28fdf883df24f9ccc648eb33f0bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 56f11ee25b0792917985fd0ebf68804e, type: 2}
+    - target: {fileID: 1706982589832230481, guid: 5bfb28fdf883df24f9ccc648eb33f0bc,
+        type: 3}
+      propertyPath: locked
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114120730911770598, guid: 5bfb28fdf883df24f9ccc648eb33f0bc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5bfb28fdf883df24f9ccc648eb33f0bc, type: 3}
@@ -640,6 +650,31 @@ PrefabInstance:
     - {fileID: 114803270669724928, guid: c9518fddab9921444b82e86f3d8a9eec, type: 3}
     - {fileID: 114675691122503930, guid: c9518fddab9921444b82e86f3d8a9eec, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c9518fddab9921444b82e86f3d8a9eec, type: 3}
+--- !u!1 &1892530430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1580888179356958, guid: 5bfb28fdf883df24f9ccc648eb33f0bc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1359724578}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1892530433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892530430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d99eef3fce239a421bc93ae89e944020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemies:
+  - {fileID: 0}
+  Doors: []
+  Open: 0
+  openDoors: 0
+  firstTime: 0
+  allDead: 0
 --- !u!1 &1997439913
 GameObject:
   m_ObjectHideFlags: 0
