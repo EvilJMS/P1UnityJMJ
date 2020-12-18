@@ -496,6 +496,11 @@ PrefabInstance:
       propertyPath: openingDirection
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4664249231094906270, guid: 10c65f0c164d2e04e9c3daf97304609a,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 6060906614203888095, guid: 10c65f0c164d2e04e9c3daf97304609a,
         type: 3}
       propertyPath: m_LocalPosition.x
