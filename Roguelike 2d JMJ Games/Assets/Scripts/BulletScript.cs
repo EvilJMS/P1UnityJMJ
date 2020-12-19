@@ -5,13 +5,15 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
   public float lifetime;
-    // Start is called before the first frame update
+
+  public int damage = 1;
+    
     void Start()
     {
         StartCoroutine(DeathDelay());
     }
 
-    // Update is called once per frame
+  
     void Update()
     {
 
@@ -20,4 +22,34 @@ public class BulletScript : MonoBehaviour
       yield return new WaitForSeconds(lifetime);
       Destroy(gameObject);
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+       if (collision.gameObject.CompareTag("Enemy"))
+        {
+            collision.gameObject.GetComponent<EnemyHealth>().LowHP(damage);
+            Destroy(gameObject);
+        }
+  
+        if (collision.gameObject.CompareTag("Wall"))
+       {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Enemy"))
+        {
+            collider.gameObject.GetComponent<EnemyHealth>().LowHP(damage);
+            Destroy(gameObject);
+        }
+
+        if (collider.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
