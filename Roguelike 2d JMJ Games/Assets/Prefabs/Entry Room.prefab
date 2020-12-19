@@ -299,6 +299,7 @@ GameObject:
   - component: {fileID: 4284646200961232}
   - component: {fileID: 114329229263871776}
   - component: {fileID: 7797845725579087620}
+  - component: {fileID: 880372431450996685}
   m_Layer: 0
   m_Name: Entry Room
   m_TagString: Untagged
@@ -358,6 +359,32 @@ MonoBehaviour:
   - {fileID: 7816407903168222181}
   Open: 0
   openDoors: 0
+--- !u!61 &880372431450996685
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384366362914734}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.0000009536743}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 13.959822, y: 13.887424}
+  m_EdgeRadius: 0
 --- !u!1 &1476785428554506
 GameObject:
   m_ObjectHideFlags: 0
@@ -4096,12 +4123,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ef5a549886ae185835809e236ab1d7, type: 3}
---- !u!1 &7948875979507330975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7782296389332523223, guid: a7ef5a549886ae185835809e236ab1d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 166723087609575240}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7623484870018365944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
@@ -4111,6 +4132,12 @@ Transform:
 --- !u!1 &8034059848059709634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7867479716691763082, guid: a7ef5a549886ae185835809e236ab1d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 166723087609575240}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7948875979507330975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7782296389332523223, guid: a7ef5a549886ae185835809e236ab1d7,
     type: 3}
   m_PrefabInstance: {fileID: 166723087609575240}
   m_PrefabAsset: {fileID: 0}
@@ -4154,12 +4181,12 @@ PrefabInstance:
     - target: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.56
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
         type: 3}
