@@ -7,23 +7,21 @@ public class RoomScript : MonoBehaviour
     public GameObject[] Enemies;
     public GameObject[] Doors;
     public bool Open;
-    public bool openDoors;
     public bool firstTime;
     public bool allDead;
+    private GameObject[] temp = new GameObject[1];
 
-    
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
         if (Open==false)
         {
             foreach (GameObject Door in Doors)
@@ -36,37 +34,26 @@ public class RoomScript : MonoBehaviour
            foreach (GameObject Door in Doors)
             {
                 Door.GetComponent<DoorScript>().locked = false;
-            } 
-        }
-
-        for (int i = 0; i < Enemies.Length; i++)
-        {
-            if (Enemies[i]!=null)
-            {
-                allDead=false;
-            
-            } else
-            {
-                allDead=true;
             }
         }
-        if (allDead)
-        {
-            Open = true;
+        if (temp.Length==0) {
+          Open = true;
         }
     }
 
-    
+    public void CheckDeath(){
+      temp = new GameObject[Enemies.Length-1];
+    }
+
+
     private void OnTriggerEnter2D(Collider2D other){
-        if (other.CompareTag("Player"))
-        {
-            if (firstTime == false)
-            {
-                firstTime = true;
-                Open = false;
-            }
+      if (other.CompareTag("Player")) {
+        if (firstTime == false) {
+          firstTime = true;
+          Open = false;
         }
+      }
     }
 
-    
+
 }
