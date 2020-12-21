@@ -7,23 +7,27 @@ public class EnemyHealth : MonoBehaviour
     public float maxHealth;
 
     public float currentHealth;
-    
+
+    GameObject Room;
+
     void Start()
     {
+        Room = transform.parent.gameObject;
         currentHealth = maxHealth;
     }
-    
+
 
     public void LowHP(int damage){
         currentHealth -= damage;
         if (currentHealth < 0)
         {
             currentHealth = 0;
-        
+
         }
         else if (currentHealth == 0)
         {
-            Destroy(gameObject);    
+            Destroy(gameObject);
+            Room.GetComponent<RoomScript>().CheckDeath();
         }
     }
 }
