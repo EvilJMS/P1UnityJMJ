@@ -7,10 +7,11 @@ public class DoorScript : MonoBehaviour
     public Sprite Locked, Unlocked;
     public bool locked;
     public BoxCollider2D collider;
+    public bool touchingWall;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -26,6 +27,6 @@ public class DoorScript : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = Unlocked;
             collider.enabled = false;
         }
-        
+
     }
 }
