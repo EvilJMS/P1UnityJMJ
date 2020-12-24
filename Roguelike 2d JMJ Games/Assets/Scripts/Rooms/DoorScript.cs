@@ -25,8 +25,10 @@ public class DoorScript : MonoBehaviour
         else if (locked==false)
         {
             GetComponent<SpriteRenderer>().sprite = Unlocked;
-            collider.enabled = false;
+            collider.isTrigger = true;
         }
 
     }
+
+
 }

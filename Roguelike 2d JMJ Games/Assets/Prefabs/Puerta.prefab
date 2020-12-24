@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1648801693610623678}
   m_Layer: 0
   m_Name: Puerta
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,10 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1098d60b093fa4447907d134db4b611e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Locked: {fileID: 21300000, guid: c552cca42bdeb7292a417dd02d44f19f, type: 3}
+  Locked: {fileID: 21300000, guid: 43943e0375efa924e9a4011d82bd1d94, type: 3}
   Unlocked: {fileID: 21300000, guid: f3ee813f9166f532780e73027a5519e7, type: 3}
   locked: 0
   collider: {fileID: 1648801693610623678}
+  touchingWall: 0
 --- !u!61 &1648801693610623678
 BoxCollider2D:
   m_ObjectHideFlags: 0
