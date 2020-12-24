@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &784097186779381010
+--- !u!1 &3788324858633876
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9168345789378826337}
-  - component: {fileID: 7410761331247175502}
-  - component: {fileID: 2564987431943760624}
+  - component: {fileID: 6039864904444303639}
+  - component: {fileID: 2561760646914511847}
+  - component: {fileID: 1310094468487874633}
   m_Layer: 5
   m_Name: BlackBox (1)
   m_TagString: Untagged
@@ -18,13 +18,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &9168345789378826337
+--- !u!224 &6039864904444303639
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784097186779381010}
+  m_GameObject: {fileID: 3788324858633876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -34,31 +34,31 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 249.5, y: -0.00037384}
-  m_SizeDelta: {x: 212.03139, y: 248.99927}
+  m_AnchoredPosition: {x: 245.28, y: 0.00012588}
+  m_SizeDelta: {x: 220.43268, y: 248.99976}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7410761331247175502
+--- !u!222 &2561760646914511847
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784097186779381010}
+  m_GameObject: {fileID: 3788324858633876}
   m_CullTransparentMesh: 0
---- !u!114 &2564987431943760624
+--- !u!114 &1310094468487874633
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784097186779381010}
+  m_GameObject: {fileID: 3788324858633876}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.24528301, g: 0.244126, b: 0.244126, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -535,7 +535,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 8827152921083584565}
-  - {fileID: 9168345789378826337}
+  - {fileID: 6039864904444303639}
   - {fileID: 1540252733372817256}
   - {fileID: 1540252733399471790}
   - {fileID: 1540252732439369449}
