@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DetectWall.cs" />
      <Compile Include="Assets\Scripts\BulletScript.cs" />
      <Compile Include="Assets\Scripts\CameraActivator.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
@@ -66,6 +65,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\README.cs" />
      <Compile Include="Assets\Scripts\Rooms\AddRoom.cs" />
+     <Compile Include="Assets\Scripts\Rooms\DetectWall.cs" />
      <Compile Include="Assets\Scripts\Rooms\DoorScript.cs" />
      <Compile Include="Assets\Scripts\Rooms\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\Rooms\RoomScript.cs" />

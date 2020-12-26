@@ -17,6 +17,9 @@ public class DoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if (touchingWall==true) {
+        collider.enabled = true;
+      } else{
         if (locked==true)
         {
             GetComponent<SpriteRenderer>().sprite = Locked;
@@ -27,7 +30,7 @@ public class DoorScript : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = Unlocked;
             collider.isTrigger = true;
         }
-
+      }
     }
 
 
