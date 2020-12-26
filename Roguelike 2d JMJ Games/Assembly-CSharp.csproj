@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyFollow.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
      <Compile Include="Assets\Scripts\EnemyStop.cs" />
      <Compile Include="Assets\Scripts\HealthSystem.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />

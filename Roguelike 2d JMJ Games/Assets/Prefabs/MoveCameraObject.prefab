@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1689742126233777213}
   - component: {fileID: 5599980362126367427}
   - component: {fileID: 3827179788594795502}
+  - component: {fileID: 8050217581440456302}
   m_Layer: 0
   m_Name: MoveCameraObject
   m_TagString: LeftDoor
@@ -71,3 +72,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   on: 1
+--- !u!114 &8050217581440456302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706909507393047064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1aba1f43061f3439db6d67415c060f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
