@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public Sprite Locked, Unlocked;
+    public Sprite Locked, Unlocked, wallDoor;
     public bool locked;
     public BoxCollider2D collider;
     public bool touchingWall;
@@ -18,6 +18,7 @@ public class DoorScript : MonoBehaviour
     void Update()
     {
       if (touchingWall==true) {
+        GetComponent<SpriteRenderer>().sprite = wallDoor;
         collider.enabled = true;
       } else{
         if (locked==true)
