@@ -987,6 +987,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8396138290386394291, guid: c9518fddab9921444b82e86f3d8a9eec,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8396138290386394291, guid: c9518fddab9921444b82e86f3d8a9eec,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8396138290386394291, guid: c9518fddab9921444b82e86f3d8a9eec,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114803270669724928, guid: c9518fddab9921444b82e86f3d8a9eec, type: 3}
     - {fileID: 114675691122503930, guid: c9518fddab9921444b82e86f3d8a9eec, type: 3}
