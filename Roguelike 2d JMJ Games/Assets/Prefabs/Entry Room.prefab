@@ -302,7 +302,7 @@ GameObject:
   - component: {fileID: 880372431450996685}
   m_Layer: 0
   m_Name: Entry Room
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -352,13 +352,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d99eef3fce239a421bc93ae89e944020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemies: []
   Doors:
   - {fileID: 7948875979507330975}
   - {fileID: 5816636465028704931}
   - {fileID: 1501357185161394233}
   - {fileID: 7816407903168222181}
   Open: 0
-  openDoors: 0
+  firstTime: 0
+  allDead: 0
+  numEnemies: 0
 --- !u!61 &880372431450996685
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4123,6 +4126,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ef5a549886ae185835809e236ab1d7, type: 3}
+--- !u!1 &7948875979507330975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7782296389332523223, guid: a7ef5a549886ae185835809e236ab1d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 166723087609575240}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7623484870018365944 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
@@ -4132,12 +4141,6 @@ Transform:
 --- !u!1 &8034059848059709634 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7867479716691763082, guid: a7ef5a549886ae185835809e236ab1d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 166723087609575240}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7948875979507330975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7782296389332523223, guid: a7ef5a549886ae185835809e236ab1d7,
     type: 3}
   m_PrefabInstance: {fileID: 166723087609575240}
   m_PrefabAsset: {fileID: 0}
