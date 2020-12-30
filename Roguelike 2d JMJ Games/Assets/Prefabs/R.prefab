@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 8693521382370803058}
   m_Layer: 0
   m_Name: R
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,6 +441,7 @@ MonoBehaviour:
   Open: 1
   firstTime: 0
   allDead: 0
+  numEnemies: 0
 --- !u!61 &8693521382370803058
 BoxCollider2D:
   m_ObjectHideFlags: 0

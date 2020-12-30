@@ -18,11 +18,13 @@ public class CameraActivator : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
+      if (other.CompareTag("Player")) {
         foreach (GameObject camera in cameras)
         {
             if (camera.GetComponent<MoveCamera>().on == false) {
               camera.GetComponent<MoveCamera>().on = true;
             }
         }
+      }
     }
 }

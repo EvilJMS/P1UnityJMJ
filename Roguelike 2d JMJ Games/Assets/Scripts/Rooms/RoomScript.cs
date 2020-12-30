@@ -9,7 +9,7 @@ public class RoomScript : MonoBehaviour
     public bool Open;
     public bool firstTime;
     public bool allDead;
-    private GameObject[] temp = new GameObject[1];
+    public int numEnemies;
 
 
 
@@ -36,13 +36,21 @@ public class RoomScript : MonoBehaviour
                 Door.GetComponent<DoorScript>().locked = false;
             }
         }
-        if (temp.Length==0) {
+        if (numEnemies==0) {
           Open = true;
+        } else{
+          Open = false;
         }
     }
 
     public void CheckDeath(){
-      temp = new GameObject[Enemies.Length-1];
+      if (numEnemies>0) {
+        numEnemies--;
+      }
+    }
+
+    public void addEnemy(){
+      numEnemies++;
     }
 
 

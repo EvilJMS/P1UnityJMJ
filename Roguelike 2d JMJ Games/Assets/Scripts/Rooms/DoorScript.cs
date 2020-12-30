@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
-    public Sprite Locked, Unlocked;
+    public Sprite Locked, Unlocked, wallDoor;
     public bool locked;
     public BoxCollider2D collider;
+    public bool touchingWall;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+      if (touchingWall==true) {
+        GetComponent<SpriteRenderer>().sprite = wallDoor;
+        collider.enabled = true;
+      } else{
         if (locked==true)
         {
             GetComponent<SpriteRenderer>().sprite = Locked;
@@ -24,8 +29,10 @@ public class DoorScript : MonoBehaviour
         else if (locked==false)
         {
             GetComponent<SpriteRenderer>().sprite = Unlocked;
-            collider.enabled = false;
+            collider.isTrigger = true;
         }
-        
+      }
     }
+
+
 }
