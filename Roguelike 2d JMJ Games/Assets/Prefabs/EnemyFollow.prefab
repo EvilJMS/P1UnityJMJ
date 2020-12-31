@@ -149,3 +149,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
+  lootDrop: {fileID: 4394898511137856624, guid: baeaae4c1a6a9c54bb6d0de57b053aab,
+    type: 3}
