@@ -234,9 +234,33 @@ MonoBehaviour:
   dialogue:
     name: Fantasma
     sentences:
-    - 'Hola, esto es una prueba '
-    - Puede que funcione, puede que no
-    - Si llegas hasta aqui, ha funcionado
+    - Bienvenido Jugador!
+    - En este maravilloso juego te mueves usando las teclas WASD
+    - Atraviesa las puertas para llegar al siguiente tuto.
+--- !u!114 &287606485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6534692798578658356, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 785657128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &366569104 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5072412911376401450, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 785657128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &384167952
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,8 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada385e134ae515478a5338320917ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 1447538095}
-  dialogueText: {fileID: 1929552440}
+  nametext: {fileID: 366569104}
+  dialogueText: {fileID: 287606485}
   animator: {fileID: 1861098107}
 --- !u!4 &384167954
 Transform:
@@ -1200,18 +1224,6 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1447538095 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5072412911376401450, guid: 7bb9a823d5b4e0349928e295f7be08d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 785657128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1519236956 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1540252733399471791, guid: 7bb9a823d5b4e0349928e295f7be08d0,
@@ -1383,17 +1395,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1929552440 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6534692798578658356, guid: 7bb9a823d5b4e0349928e295f7be08d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 785657128}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

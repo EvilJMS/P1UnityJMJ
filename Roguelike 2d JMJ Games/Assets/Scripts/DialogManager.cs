@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
-    public Text nameText;
+    public Text nametext;
     public Text dialogueText;
     private Queue<string> sentences;
 
@@ -17,7 +17,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue){
       animator.SetBool("isOpen", true);
-      nameText.text = dialogue.name;
+      nametext.text = dialogue.name;
       sentences.Clear();
 
       foreach(string sentence in dialogue.sentences){
