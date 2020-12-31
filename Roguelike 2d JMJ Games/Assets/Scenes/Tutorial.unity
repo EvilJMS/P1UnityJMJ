@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 117836330}
   - component: {fileID: 117836329}
   - component: {fileID: 117836331}
+  - component: {fileID: 117836332}
   m_Layer: 0
   m_Name: FantasmaTutorial
   m_TagString: NPC
@@ -202,7 +203,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.13168931, y: 0.117057085}
@@ -218,6 +219,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9547839, y: 2.5108056}
   m_EdgeRadius: 0
+--- !u!114 &117836332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 117836328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e2674df75b56340be239710e155f9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Fantasma
+    sentences:
+    - 'Hola, esto es una prueba '
+    - Puede que funcione, puede que no
+    - Si llegas hasta aqui, ha funcionado
 --- !u!1 &384167952
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada385e134ae515478a5338320917ef3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameText: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!4 &384167954
 Transform:
   m_ObjectHideFlags: 0
@@ -442,6 +463,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 409240931534363490, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409240931534363490, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 409240931534363490, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 409240931534363490, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 384167953}
+    - target: {fileID: 409240931534363490, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 409240931534363490, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540252732993815676, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -18.000061
+      objectReference: {fileID: 0}
     - target: {fileID: 1540252733301279161, guid: 7bb9a823d5b4e0349928e295f7be08d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -551,6 +607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VidaPersonaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540252733372817256, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 19.099976
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bb9a823d5b4e0349928e295f7be08d0, type: 3}
