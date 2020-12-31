@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
     public Text dialogueText;
     private Queue<string> sentences;
 
+
     public Animator animator;
     // Start is called before the first frame update
     void Start()

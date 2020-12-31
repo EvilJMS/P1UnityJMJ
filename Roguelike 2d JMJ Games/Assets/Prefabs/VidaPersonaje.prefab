@@ -250,7 +250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 141.27, y: -19.86}
+  m_AnchoredPosition: {x: 141.27002, y: -19.86}
   m_SizeDelta: {x: 23.699905, y: 20.141113}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1540252732993815674
@@ -1097,7 +1097,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8832419908877372692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: DisplayNextSentence
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4963532213706180664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,6 +1120,7 @@ GameObject:
   - component: {fileID: 4240167079238506424}
   - component: {fileID: 1618460984925560014}
   - component: {fileID: 2538057062149968507}
+  - component: {fileID: 1861098107}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -1135,7 +1147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 9.124, y: 60.324997}
+  m_AnchoredPosition: {x: 13, y: 57}
   m_SizeDelta: {x: 506.11353, y: 79.39331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1618460984925560014
@@ -1173,6 +1185,25 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
+--- !u!95 &1861098107
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963532213706180664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5fe344ebfd9690438ba9cb1a6a10104, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6270287770240274413
 GameObject:
   m_ObjectHideFlags: 0
