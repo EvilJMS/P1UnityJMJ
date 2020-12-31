@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
 
     public float currentHealth;
 
+    public GameObject lootDrop;
+
     GameObject Room;
 
     void Start()
@@ -27,6 +29,7 @@ public class EnemyHealth : MonoBehaviour
         else if (currentHealth == 0)
         {
             Destroy(gameObject);
+            Instantiate(lootDrop, transform.position, Quaternion.identity);
             Room.GetComponent<RoomScript>().CheckDeath();
         }
     }
