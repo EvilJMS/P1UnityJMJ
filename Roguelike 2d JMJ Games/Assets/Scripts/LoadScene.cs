@@ -19,8 +19,13 @@ public class LoadScene : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other){
       if (other.CompareTag("Player")){
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(0);
+        if (this.CompareTag("EnterTutorial")) {
+
+        }
+        if (this.CompareTag("GoBackToMenu")){
+          Time.timeScale = 1f;
+          SceneManager.LoadScene(0);
+        }
       }
     }
 }
