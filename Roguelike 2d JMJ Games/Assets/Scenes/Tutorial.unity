@@ -237,6 +237,7 @@ MonoBehaviour:
     - Bienvenido Jugador!
     - En este maravilloso juego te mueves usando las teclas WASD
     - Atraviesa las puertas para llegar al siguiente tuto.
+  endConversation: 0
 --- !u!114 &287606485 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6534692798578658356, guid: 7bb9a823d5b4e0349928e295f7be08d0,
@@ -337,7 +338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nametext: {fileID: 366569104}
   dialogueText: {fileID: 287606485}
-  spawn: {fileID: 0}
+  spawn: {fileID: 308832113}
+  isSpawner: 0
+  npc: {fileID: 857902689}
   animator: {fileID: 1861098107}
 --- !u!4 &384167954
 Transform:
@@ -745,7 +748,7 @@ GameObject:
   - component: {fileID: 857902689}
   m_Layer: 0
   m_Name: EnemyTutorial
-  m_TagString: NPC
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -768,6 +771,7 @@ MonoBehaviour:
     - En este templo te encontraras muchos enemigos.
     - Al aparecer se cerraran las puertas.
     - Eliminalos a todos usando las flechas de direccion para abrir las puertas.
+  endConversation: 0
 --- !u!61 &857902690
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1835,6 +1839,7 @@ MonoBehaviour:
     name: ???
     sentences:
     - Interactua con ese fantasma parece interesante
+  endConversation: 0
 --- !u!61 &2033803019
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class DialogManager : MonoBehaviour
     public Text dialogueText;
     private Queue<string> sentences;
     public SpawnEnemies spawn;
+    public bool isSpawner;
+    public DialogueNPC npc;
 
 
     public Animator animator;
@@ -42,7 +44,11 @@ public class DialogManager : MonoBehaviour
 
     void EndDialogue(){
       animator.SetBool("isOpen", false);
-      spawn.Spawn();
+      if (isSpawner==true) {
+        spawn.Spawn();
+        isSpawner=false;
+        npc.destroyNPC();
+      }
     }
 
 }
