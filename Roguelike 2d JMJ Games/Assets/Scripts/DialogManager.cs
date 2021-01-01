@@ -7,6 +7,7 @@ public class DialogManager : MonoBehaviour
     public Text nametext;
     public Text dialogueText;
     private Queue<string> sentences;
+    public SpawnEnemies spawn;
 
 
     public Animator animator;
@@ -14,6 +15,7 @@ public class DialogManager : MonoBehaviour
     void Start()
     {
       sentences = new Queue<string>();
+
     }
 
     public void StartDialogue(Dialogue dialogue){
@@ -40,6 +42,7 @@ public class DialogManager : MonoBehaviour
 
     void EndDialogue(){
       animator.SetBool("isOpen", false);
+      spawn.Spawn();
     }
 
 }

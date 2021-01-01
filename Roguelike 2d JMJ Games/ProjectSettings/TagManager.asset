@@ -17,6 +17,8 @@ TagManager:
   - Door
   - Room
   - NPC
+  - Loot
+  - Spawner
   layers:
   - Default
   - TransparentFX
