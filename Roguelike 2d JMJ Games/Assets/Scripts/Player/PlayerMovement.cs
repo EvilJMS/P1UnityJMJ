@@ -13,9 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public float BulletSpeed;
     private float lastFired;
     public float fireDelay;
+    private GameManager gameManager;
 
 
-    // Update is called once per frame
     void Update()
     {
       float shootHor = Input.GetAxisRaw("HorizontalShoot");
@@ -47,5 +47,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
       rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    private void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        transform.position = gameManager.lastCheckPoint;
     }
 }
