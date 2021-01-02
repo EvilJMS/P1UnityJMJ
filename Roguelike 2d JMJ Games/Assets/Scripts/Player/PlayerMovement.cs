@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public float BulletSpeed;
     private float lastFired;
     public float fireDelay;
+    private GameManager gameManager;
 
     void Start(){
       moveSpeed = GlobalControl.Instance.moveSpeed;
@@ -22,7 +23,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    // Update is called once per frame
     void Update()
     {
       if (canMove==true) {
@@ -55,10 +55,14 @@ public class PlayerMovement : MonoBehaviour
     {
       rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
-
+    private void Start()
+    {
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        transform.position = gameManager.lastCheckPoint;
+    }
+    
     public void SaveData(){
       GlobalControl.Instance.moveSpeed = moveSpeed;
       GlobalControl.Instance.BulletSpeed = BulletSpeed;
       GlobalControl.Instance.fireDelay = fireDelay;
-    }
 }
