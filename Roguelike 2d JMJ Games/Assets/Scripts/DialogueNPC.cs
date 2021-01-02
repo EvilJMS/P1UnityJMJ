@@ -19,9 +19,9 @@ public class DialogueNPC : MonoBehaviour
         if (endConversation==false) {
           endConversation=true;
           TriggerDialogue();
-        }
       }
     }
+  }
 
     public void destroyNPC(){
       Destroy(this.gameObject);

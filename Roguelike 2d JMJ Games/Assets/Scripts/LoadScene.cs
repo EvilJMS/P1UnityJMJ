@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadScene : MonoBehaviour
 {
+  public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +22,16 @@ public class LoadScene : MonoBehaviour
       if (other.CompareTag("Player")){
         switch(this.tag){
           case "EnterTutorial":
-            Time.timeScale = 1f;
             SceneManager.LoadScene(2);
             break;
           case "GoBackToMenu":
-            Time.timeScale = 1f;
             SceneManager.LoadScene(0);
             break;
           case "Level1":
-            Time.timeScale = 1f;
             SceneManager.LoadScene(1);
+            player.GetComponent<PlayerCurrency>().SaveData();
+            player.GetComponent<PlayerMovement>().SaveData();
+            player.GetComponent<HealthSystem>().SaveData();
             break;
         }
       }

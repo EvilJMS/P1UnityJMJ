@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 movement;
     public Animator animator;
+    public bool canMove=true;
 
     public GameObject bulletPrefab;
     public float BulletSpeed;
@@ -24,20 +25,20 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      float shootHor = Input.GetAxisRaw("HorizontalShoot");
-      float shootVer = Input.GetAxisRaw("VerticalShoot");
+      if (canMove==true) {
+        float shootHor = Input.GetAxisRaw("HorizontalShoot");
+        float shootVer = Input.GetAxisRaw("VerticalShoot");
 
-    movement.x = Input.GetAxisRaw("Horizontal");
-    movement.y = Input.GetAxisRaw("Vertical");
-    animator.SetFloat("Horizontal", movement.x);
-    animator.SetFloat("Vertical", movement.y);
-    animator.SetFloat("Speed", movement.sqrMagnitude);
-    if ((shootHor!=0 || shootVer!=0)&& Time.time > lastFired + fireDelay) {
-      Shoot(shootHor,shootVer);
-      lastFired = Time.time;
-    }
-
-
+      movement.x = Input.GetAxisRaw("Horizontal");
+      movement.y = Input.GetAxisRaw("Vertical");
+      animator.SetFloat("Horizontal", movement.x);
+      animator.SetFloat("Vertical", movement.y);
+      animator.SetFloat("Speed", movement.sqrMagnitude);
+      if ((shootHor!=0 || shootVer!=0)&& Time.time > lastFired + fireDelay) {
+        Shoot(shootHor,shootVer);
+        lastFired = Time.time;
+      }
+      }
     }
     void Shoot(float x, float y){
       GameObject bullet2 = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;

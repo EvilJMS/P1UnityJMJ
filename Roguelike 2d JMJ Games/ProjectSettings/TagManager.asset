@@ -24,6 +24,7 @@ TagManager:
   - Level1
   - Shop
   - GameMaster
+  - Level2
   layers:
   - Default
   - TransparentFX

@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 859130749}
   - component: {fileID: 859130754}
   - component: {fileID: 859130755}
+  - component: {fileID: 859130756}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -459,6 +460,19 @@ MonoBehaviour:
   - {fileID: 1246695245}
   corazonCompleto: {fileID: 21300000, guid: 881c4179c0e1ffb458c2cc9aef57f29d, type: 3}
   corazonVacio: {fileID: 21300002, guid: 881c4179c0e1ffb458c2cc9aef57f29d, type: 3}
+--- !u!114 &859130756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859130748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 433a9b77274edae409eaa0b1cdaa7a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCurrency: 0
 --- !u!1 &888455007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7932042139643993521, guid: 46740cefe4446a74a9360dffb1962058,
