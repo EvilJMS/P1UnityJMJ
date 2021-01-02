@@ -14,6 +14,12 @@ public class PlayerMovement : MonoBehaviour
     private float lastFired;
     public float fireDelay;
 
+    void Start(){
+      moveSpeed = GlobalControl.Instance.moveSpeed;
+      BulletSpeed = GlobalControl.Instance.BulletSpeed;
+      fireDelay = GlobalControl.Instance.fireDelay;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -47,5 +53,11 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
       rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+    }
+
+    public void SaveData(){
+      GlobalControl.Instance.moveSpeed = moveSpeed;
+      GlobalControl.Instance.BulletSpeed = BulletSpeed;
+      GlobalControl.Instance.fireDelay = fireDelay;
     }
 }

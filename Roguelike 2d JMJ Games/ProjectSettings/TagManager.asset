@@ -21,6 +21,9 @@ TagManager:
   - Spawner
   - EnterTutorial
   - GoBackToMenu
+  - Level1
+  - Shop
+  - GameMaster
   layers:
   - Default
   - TransparentFX
