@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
       moveSpeed = GlobalControl.Instance.moveSpeed;
       BulletSpeed = GlobalControl.Instance.BulletSpeed;
       fireDelay = GlobalControl.Instance.fireDelay;
-      gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-      transform.position = gameManager.lastCheckPoint;
+      /*gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+      transform.position = gameManager.lastCheckPoint;*/
     }
 
 
