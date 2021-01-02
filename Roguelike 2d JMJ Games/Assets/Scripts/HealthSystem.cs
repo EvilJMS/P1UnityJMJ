@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -25,9 +26,10 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         vida -= damage;
-        if (vida < 0)
+        if (vida <= 0)
         {
             vida = 0;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         DibujarCorazones();
     }
