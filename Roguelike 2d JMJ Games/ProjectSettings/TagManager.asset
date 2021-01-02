@@ -17,6 +17,15 @@ TagManager:
   - Door
   - Room
   - NPC
+  - Loot
+  - Spawner
+  - EnterTutorial
+  - GoBackToMenu
+  - Level1
+  - Shop
+  - GameMaster
+  - Level2
+  - GoToHub
   layers:
   - Default
   - TransparentFX

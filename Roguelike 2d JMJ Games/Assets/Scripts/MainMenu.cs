@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayTutorial()
     {
+        GlobalControl.Instance.TutorialFromMenu = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 

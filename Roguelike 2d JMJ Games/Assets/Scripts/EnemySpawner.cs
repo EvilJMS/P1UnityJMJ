@@ -5,12 +5,11 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
   public bool enemySpawn;
-  public GameObject enemy;
-  GameObject Room;
+  public GameObject spawner;
     // Start is called before the first frame update
     void Start()
     {
-      Room = transform.parent.gameObject;
+      
     }
 
     // Update is called once per frame
@@ -21,10 +20,7 @@ public class EnemySpawner : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
       if (other.CompareTag("Player")) {
         if (enemySpawn == false) {
-          GameObject newObject = Instantiate(enemy, transform.position, Quaternion.identity) as GameObject;
-          newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
-          newObject.transform.parent = Room.transform;
-          Room.GetComponent<RoomScript>().addEnemy();
+          spawner.GetComponent<SpawnEnemies>().Spawn();
           enemySpawn=true;
         }
       }

@@ -15,12 +15,14 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
+        vida = GlobalControl.Instance.HP;
+        numCorazones = GlobalControl.Instance.numCorazones;
         DibujarCorazones();
     }
 
     void Update()
     {
-        
+
     }
 
     public void TakeDamage(int damage)
@@ -63,5 +65,10 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    
+    public void SaveData(){
+      GlobalControl.Instance.HP = vida;
+      GlobalControl.Instance.numCorazones = numCorazones;
+    }
+
+
 }
