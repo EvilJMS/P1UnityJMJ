@@ -25,6 +25,7 @@ TagManager:
   - Shop
   - GameMaster
   - Level2
+  - GoToHub
   layers:
   - Default
   - TransparentFX

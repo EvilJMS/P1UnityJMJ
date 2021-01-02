@@ -273,6 +273,7 @@ MonoBehaviour:
   BulletSpeed: 7.5
   fireDelay: 0.5
   currentCurrency: 0
+  TutorialFromMenu: 1
 --- !u!4 &203403842
 Transform:
   m_ObjectHideFlags: 0
@@ -465,6 +466,7 @@ MonoBehaviour:
   spawn: {fileID: 308832113}
   isSpawner: 0
   npc: {fileID: 857902689}
+  player: {fileID: 0}
   animator: {fileID: 1861098107}
 --- !u!4 &384167954
 Transform:
@@ -1424,6 +1426,7 @@ MonoBehaviour:
   moveSpeed: 10
   rb: {fileID: 1359347617}
   animator: {fileID: 1359347614}
+  canMove: 1
   bulletPrefab: {fileID: 7399175535511142565, guid: 378894fd217afef479cdc811fc7810fe,
     type: 3}
   BulletSpeed: 7.5
@@ -1907,7 +1910,7 @@ GameObject:
   - component: {fileID: 1784015266}
   m_Layer: 0
   m_Name: ExitTutorial
-  m_TagString: GoBackToMenu
+  m_TagString: GoToHub
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1924,6 +1927,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88fd37398ffee841b3926f194d649e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  TutorialFromMenu: 0
 --- !u!61 &1784015267
 BoxCollider2D:
   m_ObjectHideFlags: 0

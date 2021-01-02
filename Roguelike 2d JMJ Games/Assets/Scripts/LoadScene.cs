@@ -6,10 +6,15 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
   public GameObject player;
+  public bool TutorialFromMenu;
     // Start is called before the first frame update
     void Start()
     {
-
+      TutorialFromMenu = GlobalControl.Instance.TutorialFromMenu;
+      if (TutorialFromMenu==true) {
+        this.tag="GoBackToMenu";
+        GlobalControl.Instance.TutorialFromMenu=false;
+      }
     }
 
     // Update is called once per frame
@@ -33,6 +38,8 @@ public class LoadScene : MonoBehaviour
             player.GetComponent<PlayerMovement>().SaveData();
             player.GetComponent<HealthSystem>().SaveData();
             break;
+          // case "GoToHub":
+
         }
       }
     }

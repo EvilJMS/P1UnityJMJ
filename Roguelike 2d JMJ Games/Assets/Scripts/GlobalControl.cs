@@ -12,6 +12,7 @@ public class GlobalControl : MonoBehaviour
     public float BulletSpeed;
     public float fireDelay;
     public int currentCurrency;
+    public bool TutorialFromMenu;
     void Awake ()
        {
         if (Instance == null)
