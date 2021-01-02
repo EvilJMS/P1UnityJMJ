@@ -82,6 +82,8 @@
      <Compile Include="Assets\Scripts\Rooms\RoomSpawner.cs" />
      <Compile Include="Assets\Scripts\Rooms\RoomTemplates.cs" />
      <Compile Include="Assets\Scripts\Skills\Skill.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkillButton.cs" />
+     <Compile Include="Assets\Scripts\Skills\SkillManager.cs" />
      <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
