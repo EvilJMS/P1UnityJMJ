@@ -22,7 +22,7 @@ public class DialogManager : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue){
-      player.canMove=false;
+      // player.canMove=false;
       animator.SetBool("isOpen", true);
       nametext.text = dialogue.name;
       sentences.Clear();

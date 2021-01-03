@@ -5,10 +5,11 @@ using UnityEngine;
 public class DetectWall : MonoBehaviour
 {
   public GameObject door;
+  public GameObject room;
     // Start is called before the first frame update
     void Start()
     {
-
+      room = transform.parent.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -17,29 +18,15 @@ public class DetectWall : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D c)
-    {
-      if (c.gameObject.CompareTag("Wall")) {
-        door.GetComponent<DoorScript>().touchingWall = true;
-      }
-    }
 
-    void OnTriggerEnter2D(Collider2D other) {
-      if (other.CompareTag("Wall")) {
-        door.GetComponent<DoorScript>().touchingWall = true;
-      }
-     }
 
-     void OnCollisionStay2D(Collision2D c)
-     {
-       if (c.gameObject.CompareTag("Wall")) {
-         door.GetComponent<DoorScript>().touchingWall = true;
-       }
-     }
 
-     void OnTriggerStay2D(Collider2D other) {
+
+
+     void OnTriggerEnter2D(Collider2D other) {
        if (other.CompareTag("Wall")) {
          door.GetComponent<DoorScript>().touchingWall = true;
+         Debug.Log(door.tag);
        }
       }
 }
