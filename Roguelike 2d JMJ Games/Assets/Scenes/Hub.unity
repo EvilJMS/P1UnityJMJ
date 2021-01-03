@@ -308,11 +308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 247650619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88fd37398ffee841b3926f194d649e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 53da46777c4372841aab842ea3cd2398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 275834757}
   player: {fileID: 0}
-  TutorialFromMenu: 0
 --- !u!61 &247650621
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -412,6 +412,7 @@ GameObject:
   - component: {fileID: 275834754}
   - component: {fileID: 275834756}
   - component: {fileID: 275834755}
+  - component: {fileID: 275834757}
   m_Layer: 5
   m_Name: Skill Tree Panel
   m_TagString: Untagged
@@ -475,6 +476,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275834753}
   m_CullTransparentMesh: 0
+--- !u!95 &275834757
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275834753}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ca9deff9b278084eb30c675b1c91143, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &345966579
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,8 +606,9 @@ MonoBehaviour:
   moveSpeed: 10
   BulletSpeed: 7.5
   fireDelay: 0.5
-  currentCurrency: 0
+  currentCurrency: 200
   TutorialFromMenu: 0
+  damage: 2
 --- !u!4 &514235480
 Transform:
   m_ObjectHideFlags: 0
@@ -868,7 +889,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1905168298}
-        m_MethodName: UpgradeButton
+        m_MethodName: UpgradeButtons
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1599,6 +1620,168 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1377921843}
   m_CullTransparentMesh: 0
+--- !u!1 &1442870524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1442870525}
+  - component: {fileID: 1442870529}
+  - component: {fileID: 1442870528}
+  - component: {fileID: 1442870530}
+  - component: {fileID: 1442870527}
+  - component: {fileID: 1442870526}
+  m_Layer: 5
+  m_Name: Skill02
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1442870525
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442870524}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1855848839}
+  m_Father: {fileID: 1771414643}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 3, y: 211.2}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1442870526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442870524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1442870528}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1442870527}
+        m_MethodName: PressSkillButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1442870527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442870524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e410151320297b4db7e594eebeda814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillImage: {fileID: 1042710163}
+  skillNameText: {fileID: 345966581}
+  skillDesText: {fileID: 803068082}
+  skillCostText: {fileID: 1519018940}
+  skillButtonID: 1
+--- !u!114 &1442870528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442870524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 4ee10738e5c3cb540ae28d156a28f946, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1442870529
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442870524}
+  m_CullTransparentMesh: 0
+--- !u!114 &1442870530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442870524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013573186e19fd04cb6355e06f419851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: Attack Up
+  skillSprite: {fileID: 21300000, guid: 4ee10738e5c3cb540ae28d156a28f946, type: 3}
+  skillDes: Upgrades the damage of the bullet
+  isBuyable: 1
+  skillCost: 100
+  skillCostString: 100
 --- !u!1 &1519018938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,8 +1897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -116, y: 193}
-  m_SizeDelta: {x: 138.06277, y: 140.99069}
+  m_AnchoredPosition: {x: -145, y: 210}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1626070277
 MonoBehaviour:
@@ -1729,10 +1912,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013573186e19fd04cb6355e06f419851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillName: Attack Up
+  skillName: AttackUp
   skillSprite: {fileID: 21300000, guid: 4ee10738e5c3cb540ae28d156a28f946, type: 3}
   skillDes: Upgrades the damage of the bullet
-  isBuyable: 0
+  isBuyable: 1
   skillCost: 100
   skillCostString: 100
 --- !u!114 &1626070278
@@ -1940,13 +2123,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1626070276}
+  - {fileID: 1442870525}
   m_Father: {fileID: 275834754}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 577.9, y: 0.8543091}
-  m_SizeDelta: {x: 651.531, y: -1.7087402}
+  m_AnchoredPosition: {x: 607.7, y: 1.0743408}
+  m_SizeDelta: {x: 591.8986, y: -1.2687404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771414644
 MonoBehaviour:
@@ -2013,6 +2197,78 @@ Transform:
   m_Father: {fileID: 2098120323}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1855848838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855848839}
+  - component: {fileID: 1855848841}
+  - component: {fileID: 1855848840}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1855848839
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855848838}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1442870525}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 1.7600021, y: -2.4000015}
+  m_SizeDelta: {x: 13.280228, y: 4.861267}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1855848840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855848838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 57e32f1e5d5d7e4458d5685cb5f272ce, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1855848841
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855848838}
+  m_CullTransparentMesh: 0
 --- !u!1 &1905168297
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,9 +2300,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skills:
   - {fileID: 1626070277}
+  - {fileID: 1442870530}
   skillButtons:
   - {fileID: 1626070280}
-  activateSkill: {fileID: 0}
+  activateSkill: {fileID: 1442870530}
+  player: {fileID: 2098120315}
+  bulletPrefab: {fileID: 0}
   defaultFrame: {fileID: 21300000, guid: 57e32f1e5d5d7e4458d5685cb5f272ce, type: 3}
   activeFrame: {fileID: 21300000, guid: 19cd69d6eb9143647ae7ceb6d63fa5f2, type: 3}
   actualCurrency: 0

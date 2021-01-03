@@ -11,6 +11,8 @@ public class SkillManager : MonoBehaviour
     [SerializeField] public Skill activateSkill;
 
     [Header("STAGE 02")]
+    public GameObject player;
+    public GameObject bulletPrefab;
     public Sprite defaultFrame;
     public Sprite activeFrame;
 
@@ -43,7 +45,7 @@ public class SkillManager : MonoBehaviour
 
     private void UpdateSkillImage(){
       for (int i = 0; i<skills.Length;i++) {
-        if (skills[i].isBuyable==true) {
+        if (skills[i].isBuyable==false) {
           skills[i].GetComponent<Image>().color = new Vector4(1,1,1,1);
           skills[i].transform.GetChild(0).GetComponent<Image>().sprite = activeFrame;
         }
@@ -54,14 +56,25 @@ public class SkillManager : MonoBehaviour
       }
     }
 
-    public void UpgradeButton(){
+    public void UpgradeButtons(){
       if (activateSkill.isBuyable==true&&remainingCurrency >= activateSkill.skillCost) {
         activateSkill.isBuyable=false;
         remainingCurrency-=activateSkill.skillCost;
+        UpgradePlayer();
       } else{
         Debug.Log("Not enough coins!!! OR "+activateSkill+" is bought already");
       }
       UpdateSkillImage();
       DisplayMoney();
+    }
+
+    public void UpgradePlayer(){
+      switch (activateSkill.skillName) {
+        case "AttackUp":
+          GlobalControl.Instance.damage+=1;
+          Debug.Log("Si aparece esto es que funciona");
+          break;
+
+      }
     }
 }

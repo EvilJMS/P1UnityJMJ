@@ -13,6 +13,7 @@ public class GlobalControl : MonoBehaviour
     public float fireDelay;
     public int currentCurrency;
     public bool TutorialFromMenu;
+    public int damage;
     void Awake ()
        {
         if (Instance == null)

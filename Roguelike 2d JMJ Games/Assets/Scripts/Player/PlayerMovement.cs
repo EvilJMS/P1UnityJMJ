@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
       moveSpeed = GlobalControl.Instance.moveSpeed;
       BulletSpeed = GlobalControl.Instance.BulletSpeed;
       fireDelay = GlobalControl.Instance.fireDelay;
-      gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-      transform.position = gameManager.lastCheckPoint;
+      /*gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+      transform.position = gameManager.lastCheckPoint;*/
     }
 
 
@@ -40,6 +40,12 @@ public class PlayerMovement : MonoBehaviour
         Shoot(shootHor,shootVer);
         lastFired = Time.time;
       }
+      } else {
+        movement.x = 0;
+        movement.y = 0;
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
       }
     }
     void Shoot(float x, float y){

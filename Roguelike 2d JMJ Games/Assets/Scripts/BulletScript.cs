@@ -11,6 +11,7 @@ public class BulletScript : MonoBehaviour
     void Start()
     {
         StartCoroutine(DeathDelay());
+        damage = GlobalControl.Instance.damage;
     }
 
 
@@ -39,6 +40,10 @@ public class BulletScript : MonoBehaviour
         }
 
 
+    }
+
+    public void SaveData(){
+      GlobalControl.Instance.damage = damage;
     }
 
 }
