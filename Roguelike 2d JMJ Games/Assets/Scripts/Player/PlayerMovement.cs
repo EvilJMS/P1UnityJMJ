@@ -40,6 +40,12 @@ public class PlayerMovement : MonoBehaviour
         Shoot(shootHor,shootVer);
         lastFired = Time.time;
       }
+      } else {
+        movement.x = 0;
+        movement.y = 0;
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
       }
     }
     void Shoot(float x, float y){

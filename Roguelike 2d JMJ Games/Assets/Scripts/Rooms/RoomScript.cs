@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RoomScript : MonoBehaviour
 {
-    public GameObject[] Enemies;
     public GameObject[] Doors;
     public bool Open;
     public bool firstTime;

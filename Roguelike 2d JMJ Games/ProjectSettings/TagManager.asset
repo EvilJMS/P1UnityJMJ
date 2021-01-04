@@ -23,9 +23,15 @@ TagManager:
   - GoBackToMenu
   - Level1
   - Shop
-  - GameMaster
   - Level2
   - GoToHub
+  - GameMaster
+  - GameManager
+  - Skill01
+  - Skill02
+  - Skill03
+  - Skill04
+  - BossRoom
   layers:
   - Default
   - TransparentFX
