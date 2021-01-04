@@ -11,5 +11,7 @@ public class Skill : MonoBehaviour
     public string skillDes;
     public bool isBuyable;
     public int skillCost;
-    public string skillCostString;
+    public bool isUpgradable;
+    public int timesBuyable;
+    public int counter;
 }

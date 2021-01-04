@@ -12,7 +12,6 @@ public class SkillManager : MonoBehaviour
 
     [Header("STAGE 02")]
     public GameObject player;
-    public GameObject bulletPrefab;
     public Sprite defaultFrame;
     public Sprite activeFrame;
 
@@ -35,8 +34,15 @@ public class SkillManager : MonoBehaviour
     void Start(){
       actualCurrency = GlobalControl.Instance.currentCurrency;
       remainingCurrency = actualCurrency;
+      UpdateCounter();
       DisplayMoney();
       UpdateSkillImage();
+    }
+
+    private void UpdateCounter(){
+      for (int i = 0; i<skills.Length;i++){
+        skills[i].transform.GetChild(1).GetComponent<Text>().text = skills[i].counter.ToString() + "/" + skills[i].timesBuyable.ToString();
+      }
     }
 
     private void DisplayMoney(){
@@ -72,7 +78,15 @@ public class SkillManager : MonoBehaviour
       switch (activateSkill.skillName) {
         case "AttackUp":
           GlobalControl.Instance.damage+=1;
-          Debug.Log("Si aparece esto es que funciona");
+          activateSkill.skillCost+=100;
+          activateSkill.GetComponent<SkillButton>().UpdateSkill();
+          break;
+        case "SpeedUp":
+          player.GetComponent<PlayerMovement>().moveSpeed+=(player.GetComponent<PlayerMovement>().moveSpeed*50)/100;
+          break;
+        case "CadenceUp":
+          player.GetComponent<PlayerMovement>().BulletSpeed+=1;
+          player.GetComponent<PlayerMovement>().fireDelay-=(player.GetComponent<PlayerMovement>().fireDelay*25)/100;
           break;
 
       }

@@ -17,6 +17,13 @@ public class SkillButton : MonoBehaviour
       skillImage.sprite = SkillManager.instance.skills[skillButtonID].skillSprite;
       skillNameText.text = SkillManager.instance.skills[skillButtonID].skillName;
       skillDesText.text = SkillManager.instance.skills[skillButtonID].skillDes;
-      skillCostText.text = SkillManager.instance.skills[skillButtonID].skillCostString;
+      skillCostText.text = SkillManager.instance.skills[skillButtonID].skillCost.ToString();
+    }
+
+    public void UpdateSkill(){
+      skillImage.sprite = SkillManager.instance.skills[skillButtonID].skillSprite;
+      skillNameText.text = SkillManager.instance.skills[skillButtonID].skillName;
+      skillDesText.text = SkillManager.instance.skills[skillButtonID].skillDes;
+      skillCostText.text = SkillManager.instance.skills[skillButtonID].skillCost.ToString();
     }
 }
