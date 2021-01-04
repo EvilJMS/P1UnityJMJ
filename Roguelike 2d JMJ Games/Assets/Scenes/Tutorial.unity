@@ -273,7 +273,8 @@ MonoBehaviour:
   BulletSpeed: 7.5
   fireDelay: 0.5
   currentCurrency: 0
-  TutorialFromMenu: 1
+  TutorialFromMenu: 0
+  damage: 1
 --- !u!4 &203403842
 Transform:
   m_ObjectHideFlags: 0
@@ -414,7 +415,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331720718}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.91, y: -7.99, z: 0.265625}
+  m_LocalPosition: {x: 23.34, y: -7.94, z: 0.265625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1931,7 +1932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b88fd37398ffee841b3926f194d649e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1359347612}
   TutorialFromMenu: 0
 --- !u!61 &1784015267
 BoxCollider2D:

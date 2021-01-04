@@ -27,6 +27,10 @@ TagManager:
   - GoToHub
   - GameMaster
   - GameManager
+  - Skill01
+  - Skill02
+  - Skill03
+  - Skill04
   layers:
   - Default
   - TransparentFX

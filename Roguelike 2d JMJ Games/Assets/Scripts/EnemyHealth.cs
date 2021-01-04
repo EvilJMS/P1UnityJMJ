@@ -21,16 +21,11 @@ public class EnemyHealth : MonoBehaviour
 
     public void LowHP(int damage){
         currentHealth -= damage;
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
-            currentHealth = 0;
-
-        }
-        else if (currentHealth == 0)
-        {
-            Destroy(gameObject);
-            Instantiate(lootDrop, transform.position, Quaternion.identity);
-            Room.GetComponent<RoomScript>().CheckDeath();
+          Destroy(gameObject);
+          Instantiate(lootDrop, transform.position, Quaternion.identity);
+          Room.GetComponent<RoomScript>().CheckDeath();
         }
     }
 }

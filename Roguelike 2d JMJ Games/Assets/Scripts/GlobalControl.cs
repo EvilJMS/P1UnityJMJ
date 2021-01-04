@@ -14,6 +14,7 @@ public class GlobalControl : MonoBehaviour
     public int currentCurrency;
     public bool TutorialFromMenu;
     public int damage;
+    public List<int> counterList;
     void Awake ()
        {
         if (Instance == null)

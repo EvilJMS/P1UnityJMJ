@@ -7,7 +7,9 @@ public class SkillManager : MonoBehaviour
 {
     public static SkillManager instance;
     public Skill[] skills;
+    public List<Skill> skillList;
     public SkillButton[] skillButtons;
+    public List<SkillButton> skillButtonList;
     [SerializeField] public Skill activateSkill;
 
     [Header("STAGE 02")]
@@ -28,20 +30,28 @@ public class SkillManager : MonoBehaviour
           Destroy(gameObject);
         }
       }
-      DontDestroyOnLoad(gameObject);
+      // DontDestroyOnLoad(gameObject);
     }
 
     void Start(){
       actualCurrency = GlobalControl.Instance.currentCurrency;
       remainingCurrency = actualCurrency;
+      skillList.Add(GameObject.FindGameObjectWithTag("Skill01").GetComponent<Skill>());
+      skillList.Add(GameObject.FindGameObjectWithTag("Skill02").GetComponent<Skill>());
+      skillList.Add(GameObject.FindGameObjectWithTag("Skill03").GetComponent<Skill>());
+      skillList.Add(GameObject.FindGameObjectWithTag("Skill04").GetComponent<Skill>());
+      skillButtonList.Add(GameObject.FindGameObjectWithTag("Skill01").GetComponent<SkillButton>());
+      skillButtonList.Add(GameObject.FindGameObjectWithTag("Skill02").GetComponent<SkillButton>());
+      skillButtonList.Add(GameObject.FindGameObjectWithTag("Skill03").GetComponent<SkillButton>());
+      skillButtonList.Add(GameObject.FindGameObjectWithTag("Skill04").GetComponent<SkillButton>());
       UpdateCounter();
       DisplayMoney();
       UpdateSkillImage();
     }
 
     private void UpdateCounter(){
-      for (int i = 0; i<skills.Length;i++){
-        skills[i].transform.GetChild(1).GetComponent<Text>().text = skills[i].counter.ToString() + "/" + skills[i].timesBuyable.ToString();
+      foreach (Skill x in skillList){
+        x.transform.GetChild(1).GetComponent<Text>().text = x.counter.ToString() + "/" + x.timesBuyable.ToString();
       }
     }
 
@@ -50,14 +60,15 @@ public class SkillManager : MonoBehaviour
     }
 
     private void UpdateSkillImage(){
-      for (int i = 0; i<skills.Length;i++) {
-        if (skills[i].isBuyable==false) {
-          skills[i].GetComponent<Image>().color = new Vector4(1,1,1,1);
-          skills[i].transform.GetChild(0).GetComponent<Image>().sprite = activeFrame;
+
+      foreach (Skill x in skillList){
+        if (x.isBuyable==false) {
+          x.GetComponent<Image>().color = new Vector4(1,1,1,1);
+          x.transform.GetChild(0).GetComponent<Image>().sprite = activeFrame;
         }
         else {
-          skills[i].GetComponent<Image>().color = new Vector4(0.39f, 0.39f, 0.39f, 1);
-          skills[i].transform.GetChild(0).GetComponent<Image>().sprite = defaultFrame;
+          x.GetComponent<Image>().color = new Vector4(0.39f, 0.39f, 0.39f, 1);
+          x.transform.GetChild(0).GetComponent<Image>().sprite = defaultFrame;
         }
       }
     }
@@ -92,7 +103,6 @@ public class SkillManager : MonoBehaviour
           player.GetComponent<PlayerMovement>().BulletSpeed+=1;
           player.GetComponent<PlayerMovement>().fireDelay-=(player.GetComponent<PlayerMovement>().fireDelay*25)/100;
           break;
-
       }
     }
 }
