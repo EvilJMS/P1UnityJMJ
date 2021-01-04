@@ -606,7 +606,7 @@ MonoBehaviour:
   moveSpeed: 10
   BulletSpeed: 7.5
   fireDelay: 1
-  currentCurrency: 200
+  currentCurrency: 1000000
   TutorialFromMenu: 0
   damage: 2
 --- !u!4 &514235480
@@ -657,8 +657,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.7600021, y: -2.399994}
-  m_SizeDelta: {x: 13.280228, y: 4.861267}
+  m_AnchoredPosition: {x: 0.70000076, y: -2.399994}
+  m_SizeDelta: {x: 11.234001, y: 4.861267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &519584287
 MonoBehaviour:
@@ -766,8 +766,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.7600021, y: -2.4000015}
-  m_SizeDelta: {x: 13.280228, y: 4.861267}
+  m_AnchoredPosition: {x: -2.44, y: -2.4000015}
+  m_SizeDelta: {x: 4.8801346, y: 4.861267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689119812
 MonoBehaviour:
@@ -2364,8 +2364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.7600021, y: -2.4000015}
-  m_SizeDelta: {x: 13.280228, y: 4.861267}
+  m_AnchoredPosition: {x: -2.44, y: -2.4000015}
+  m_SizeDelta: {x: 4.8801727, y: 4.861267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558691558
 MonoBehaviour:
@@ -2779,8 +2779,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.7600021, y: -2.4000015}
-  m_SizeDelta: {x: 13.280228, y: 4.861267}
+  m_AnchoredPosition: {x: -2.44, y: -2.4000015}
+  m_SizeDelta: {x: 4.8801346, y: 4.861267}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1855848840
 MonoBehaviour:

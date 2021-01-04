@@ -68,7 +68,6 @@ public class SkillManager : MonoBehaviour
         remainingCurrency-=activateSkill.skillCost;
         if (activateSkill.counter==activateSkill.timesBuyable) {
           activateSkill.isBuyable=false;
-          activateSkill.GetComponent<SkillButton>().skillCostText.text = "Max";
         }
         UpgradePlayer();
       } else{

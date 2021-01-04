@@ -17,13 +17,21 @@ public class SkillButton : MonoBehaviour
       skillImage.sprite = SkillManager.instance.skills[skillButtonID].skillSprite;
       skillNameText.text = SkillManager.instance.skills[skillButtonID].skillName;
       skillDesText.text = SkillManager.instance.skills[skillButtonID].skillDes;
-      skillCostText.text = SkillManager.instance.skills[skillButtonID].skillCost.ToString();
+      UpdatePrice();
     }
 
     public void UpdateSkill(){
       skillImage.sprite = SkillManager.instance.skills[skillButtonID].skillSprite;
       skillNameText.text = SkillManager.instance.skills[skillButtonID].skillName;
       skillDesText.text = SkillManager.instance.skills[skillButtonID].skillDes;
-      skillCostText.text = SkillManager.instance.skills[skillButtonID].skillCost.ToString();
+      UpdatePrice();
+    }
+
+    void UpdatePrice(){
+      if (SkillManager.instance.skills[skillButtonID].counter==SkillManager.instance.skills[skillButtonID].timesBuyable) {
+        skillCostText.text = "Max Update";
+      } else{
+        skillCostText.text = SkillManager.instance.skills[skillButtonID].skillCost.ToString();
+      }
     }
 }
