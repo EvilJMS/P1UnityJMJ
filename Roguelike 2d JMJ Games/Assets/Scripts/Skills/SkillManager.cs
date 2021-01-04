@@ -6,9 +6,7 @@ using UnityEngine.UI;
 public class SkillManager : MonoBehaviour
 {
     public static SkillManager instance;
-    public Skill[] skills;
     public List<Skill> skillList;
-    public SkillButton[] skillButtons;
     public List<SkillButton> skillButtonList;
     [SerializeField] public Skill activateSkill;
 
@@ -32,6 +30,11 @@ public class SkillManager : MonoBehaviour
       }
       // DontDestroyOnLoad(gameObject);
     }
+    void Update(){
+      UpdateCounter();
+      DisplayMoney();
+      UpdateSkillImage();
+    }
 
     void Start(){
       actualCurrency = GlobalControl.Instance.currentCurrency;
@@ -44,9 +47,6 @@ public class SkillManager : MonoBehaviour
       skillButtonList.Add(GameObject.FindGameObjectWithTag("Skill02").GetComponent<SkillButton>());
       skillButtonList.Add(GameObject.FindGameObjectWithTag("Skill03").GetComponent<SkillButton>());
       skillButtonList.Add(GameObject.FindGameObjectWithTag("Skill04").GetComponent<SkillButton>());
-      UpdateCounter();
-      DisplayMoney();
-      UpdateSkillImage();
     }
 
     private void UpdateCounter(){
@@ -62,6 +62,9 @@ public class SkillManager : MonoBehaviour
     private void UpdateSkillImage(){
 
       foreach (Skill x in skillList){
+        if (x.counter==x.timesBuyable) {
+          x.isBuyable=false;
+        }
         if (x.isBuyable==false) {
           x.GetComponent<Image>().color = new Vector4(1,1,1,1);
           x.transform.GetChild(0).GetComponent<Image>().sprite = activeFrame;
@@ -93,8 +96,6 @@ public class SkillManager : MonoBehaviour
       switch (activateSkill.skillName) {
         case "AttackUp":
           GlobalControl.Instance.damage+=1;
-          activateSkill.skillCost+=100;
-          activateSkill.GetComponent<SkillButton>().UpdateSkill();
           break;
         case "SpeedUp":
           player.GetComponent<PlayerMovement>().moveSpeed+=(player.GetComponent<PlayerMovement>().moveSpeed*50)/100;
@@ -103,6 +104,13 @@ public class SkillManager : MonoBehaviour
           player.GetComponent<PlayerMovement>().BulletSpeed+=1;
           player.GetComponent<PlayerMovement>().fireDelay-=(player.GetComponent<PlayerMovement>().fireDelay*25)/100;
           break;
+        case "HealthUp":
+          player.GetComponent<HealthSystem>().vida+=1;
+          player.GetComponent<HealthSystem>().numCorazones+=1;
+          break;
       }
+      activateSkill.skillCost+=activateSkill.skillCost;
+      activateSkill.GetComponent<SkillButton>().UpdateSkill();
+      activateSkill.SaveData();
     }
 }

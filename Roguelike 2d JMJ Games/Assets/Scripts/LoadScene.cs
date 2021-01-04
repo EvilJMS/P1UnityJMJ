@@ -29,6 +29,9 @@ public class LoadScene : MonoBehaviour
         switch(this.tag){
           case "EnterTutorial":
             skill.GetComponent<Skill>().SaveData();
+            player.GetComponent<PlayerCurrency>().SaveData();
+            player.GetComponent<PlayerMovement>().SaveData();
+            player.GetComponent<HealthSystem>().SaveData();
             SceneManager.LoadScene(2);
             break;
           case "GoBackToMenu":

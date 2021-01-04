@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SkillButton : MonoBehaviour
 {
+    public Animator animator;
     public Image skillImage;
     public Text skillNameText;
     public Text skillDesText;
@@ -13,6 +14,7 @@ public class SkillButton : MonoBehaviour
     public int skillButtonID;
 
     public void PressSkillButton(){
+      animator.SetBool("isOpen", true);
       SkillManager.instance.activateSkill = transform.GetComponent<Skill>();
       skillImage.sprite = SkillManager.instance.skillList[skillButtonID].skillSprite;
       skillNameText.text = SkillManager.instance.skillList[skillButtonID].skillName;
