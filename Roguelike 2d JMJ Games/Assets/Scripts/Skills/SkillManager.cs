@@ -64,14 +64,19 @@ public class SkillManager : MonoBehaviour
 
     public void UpgradeButtons(){
       if (activateSkill.isBuyable==true&&remainingCurrency >= activateSkill.skillCost) {
-        activateSkill.isBuyable=false;
+        activateSkill.counter++;
         remainingCurrency-=activateSkill.skillCost;
+        if (activateSkill.counter==activateSkill.timesBuyable) {
+          activateSkill.isBuyable=false;
+          activateSkill.GetComponent<SkillButton>().skillCostText.text = "Max";
+        }
         UpgradePlayer();
       } else{
         Debug.Log("Not enough coins!!! OR "+activateSkill+" is bought already");
       }
       UpdateSkillImage();
       DisplayMoney();
+      UpdateCounter();
     }
 
     public void UpgradePlayer(){

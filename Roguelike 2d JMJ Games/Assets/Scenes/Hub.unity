@@ -2086,7 +2086,7 @@ MonoBehaviour:
   isBuyable: 1
   skillCost: 50
   isUpgradable: 0
-  timesBuyable: 0
+  timesBuyable: 2
   counter: 0
 --- !u!1 &1519018938
 GameObject:
@@ -2328,7 +2328,7 @@ MonoBehaviour:
   isBuyable: 1
   skillCost: 200
   isUpgradable: 0
-  timesBuyable: 0
+  timesBuyable: 2
   counter: 0
 --- !u!1 &1558691556
 GameObject:
@@ -2677,7 +2677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 602, y: 3.2301}
+  m_AnchoredPosition: {x: 602, y: 3.2301025}
   m_SizeDelta: {x: 541.1337, y: -6.460266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1771414644
@@ -3005,7 +3005,7 @@ MonoBehaviour:
   isBuyable: 1
   skillCost: 100
   isUpgradable: 0
-  timesBuyable: 0
+  timesBuyable: 5
   counter: 0
 --- !u!114 &1905669117
 MonoBehaviour:
