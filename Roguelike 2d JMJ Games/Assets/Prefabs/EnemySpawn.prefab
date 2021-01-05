@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1aba1f43061f3439db6d67415c060f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawn: 1
+  enemySpawn: 0
   spawner: {fileID: 7766369704103049161}
 --- !u!1 &7766369704103049161
 GameObject:

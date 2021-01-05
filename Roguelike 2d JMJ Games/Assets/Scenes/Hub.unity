@@ -2166,7 +2166,7 @@ MonoBehaviour:
   isBuyable: 1
   skillCost: 50
   timesBuyable: 2
-  counter: 500
+  counter: 0
 --- !u!1 &1519018938
 GameObject:
   m_ObjectHideFlags: 0
