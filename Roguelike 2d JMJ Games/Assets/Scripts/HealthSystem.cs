@@ -65,6 +65,11 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
+    public void EarnHealth(int heart)
+    {
+          vida+=heart;
+    }
+
     public void SaveData(){
       GlobalControl.Instance.HP = vida;
       GlobalControl.Instance.numCorazones = numCorazones;
