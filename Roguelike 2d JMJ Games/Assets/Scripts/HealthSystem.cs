@@ -8,7 +8,6 @@ public class HealthSystem : MonoBehaviour
 {
     public int vida;
     public int numCorazones;
-
     public Image[] corazones;
     public Sprite corazonCompleto;
     public Sprite corazonVacio;
@@ -30,8 +29,11 @@ public class HealthSystem : MonoBehaviour
         vida -= damage;
         if (vida <= 0)
         {
-            vida = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            // vida = 0;
+            ResetData();
+            GetComponent<PlayerCurrency>().SaveData();
+            GetComponent<PlayerMovement>().SaveData();
+            SceneManager.LoadScene(4);
         }
         DibujarCorazones();
     }
@@ -73,6 +75,11 @@ public class HealthSystem : MonoBehaviour
     public void SaveData(){
       GlobalControl.Instance.HP = vida;
       GlobalControl.Instance.numCorazones = numCorazones;
+    }
+
+    void ResetData(){
+      GlobalControl.Instance.numCorazones = numCorazones;
+      GlobalControl.Instance.HP = numCorazones;
     }
 
 
