@@ -9,7 +9,7 @@ public class SpawnEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      Room = transform.parent.parent.gameObject;
+
     }
 
     // Update is called once per frame
@@ -19,9 +19,13 @@ public class SpawnEnemies : MonoBehaviour
     }
 
     public void Spawn(){
-      GameObject newObject = Instantiate(enemy, transform.position, Quaternion.identity) as GameObject;
-      newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
-      newObject.transform.parent = Room.transform;
-      Room.GetComponent<RoomScript>().addEnemy();
+      if (Room.tag=="BossRoom") {
+        Debug.Log("Llenar esto para spawnear boss");
+      } else{
+        GameObject newObject = Instantiate(enemy, transform.position, Quaternion.identity) as GameObject;
+        newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
+        newObject.transform.parent = Room.transform;
+        Room.GetComponent<RoomScript>().addEnemy();
+      }
     }
 }

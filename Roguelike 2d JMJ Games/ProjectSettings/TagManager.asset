@@ -32,6 +32,7 @@ TagManager:
   - Skill03
   - Skill04
   - BossRoom
+  - SpawnManager
   layers:
   - Default
   - TransparentFX

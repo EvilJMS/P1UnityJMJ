@@ -24,7 +24,7 @@ public class DetectWall : MonoBehaviour
 
 
      void OnTriggerEnter2D(Collider2D other) {
-       if (other.CompareTag("Wall")) {
+       if (other.CompareTag("Wall")||other.CompareTag("ClosedWall")) {
          door.GetComponent<DoorScript>().touchingWall = true;
          Debug.Log(door.tag);
        }
