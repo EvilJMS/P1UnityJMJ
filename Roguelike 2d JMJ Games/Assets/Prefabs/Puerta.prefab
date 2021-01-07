@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 7782296389332523223}
+  room: {fileID: 0}
 --- !u!1 &7782296389332523223
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,9 +190,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1098d60b093fa4447907d134db4b611e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Locked: {fileID: 21300000, guid: 43943e0375efa924e9a4011d82bd1d94, type: 3}
-  Unlocked: {fileID: 21300000, guid: f3ee813f9166f532780e73027a5519e7, type: 3}
-  wallDoor: {fileID: 21300000, guid: ff9310f0d9b059547a80e8bd1cae7348, type: 3}
+  Locked:
+  - {fileID: 21300000, guid: c552cca42bdeb7292a417dd02d44f19f, type: 3}
+  - {fileID: 21300000, guid: ff74b9c51f2b44848ad0998055cb987a, type: 3}
+  - {fileID: 21300000, guid: 1331134f7198f1b41b822ef12d9a6605, type: 3}
+  Unlocked:
+  - {fileID: 21300000, guid: f3ee813f9166f532780e73027a5519e7, type: 3}
+  - {fileID: 21300000, guid: 5c0aea3c032cd5443a7fa41cfc683139, type: 3}
+  - {fileID: 21300000, guid: 5a234ea6eb969b24b9496c0cb37152fe, type: 3}
+  wallDoor:
+  - {fileID: 21300000, guid: ff9310f0d9b059547a80e8bd1cae7348, type: 3}
+  - {fileID: 21300000, guid: 45cdcda50a1754e46912f6523dbdf202, type: 3}
+  - {fileID: 21300000, guid: 0c0b2ffb2adcd75419beb0c2f2d21f6b, type: 3}
   locked: 0
   collider: {fileID: 1648801693610623678}
   touchingWall: 0
