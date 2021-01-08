@@ -12,4 +12,8 @@ public class DeathMenu : MonoBehaviour
     public void GoToHub(){
       SceneManager.LoadScene(3);
     }
+
+    public void Quit(){
+      Application.Quit();
+    }
 }
