@@ -1616,7 +1616,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2098120315}
-  skill: {fileID: 1626070275}
+  skillList:
+  - {fileID: 1626070275}
+  - {fileID: 1442870524}
+  - {fileID: 1549901424}
+  - {fileID: 1905669112}
   TutorialFromMenu: 0
 --- !u!61 &1199173591
 BoxCollider2D:
@@ -3640,9 +3644,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4109983240117935387, guid: 24e540b9584572f4280811155ed2c604,
         type: 3}
+      propertyPath: skillList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4109983240117935387, guid: 24e540b9584572f4280811155ed2c604,
+        type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2098120315}
+    - target: {fileID: 4109983240117935387, guid: 24e540b9584572f4280811155ed2c604,
+        type: 3}
+      propertyPath: skillList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1626070275}
+    - target: {fileID: 4109983240117935387, guid: 24e540b9584572f4280811155ed2c604,
+        type: 3}
+      propertyPath: skillList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1442870524}
+    - target: {fileID: 4109983240117935387, guid: 24e540b9584572f4280811155ed2c604,
+        type: 3}
+      propertyPath: skillList.Array.data[2]
+      value: 
+      objectReference: {fileID: 1549901424}
+    - target: {fileID: 4109983240117935387, guid: 24e540b9584572f4280811155ed2c604,
+        type: 3}
+      propertyPath: skillList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1905669112}
     - target: {fileID: 4109983240117935390, guid: 24e540b9584572f4280811155ed2c604,
         type: 3}
       propertyPath: m_LocalPosition.x
