@@ -474,6 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCurrency: 0
+  currencyText: {fileID: 1418238962}
 --- !u!1 &997872641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1002,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1327550873}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1418238962 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1266614087137088523, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1540252732483458550}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1426229919 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1540252733372817257, guid: 7bb9a823d5b4e0349928e295f7be08d0,

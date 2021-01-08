@@ -785,6 +785,18 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &228889911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1266614087137088523, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 228889897}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &252483988
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +1437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCurrency: 0
+  currencyText: {fileID: 228889911}
 --- !u!114 &1571369278
 MonoBehaviour:
   m_ObjectHideFlags: 0
