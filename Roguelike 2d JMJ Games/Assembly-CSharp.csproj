@@ -55,18 +55,24 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BulletScript.cs" />
      <Compile Include="Assets\Scripts\CameraActivator.cs" />
+     <Compile Include="Assets\Scripts\CheckPoints.cs" />
      <Compile Include="Assets\Scripts\CoinLooted.cs" />
+     <Compile Include="Assets\Scripts\DeathMenu.cs" />
      <Compile Include="Assets\Scripts\Destroyer.cs" />
      <Compile Include="Assets\Scripts\DialogManager.cs" />
      <Compile Include="Assets\Scripts\Dialogue.cs" />
      <Compile Include="Assets\Scripts\DialogueNPC.cs" />
-     <Compile Include="Assets\Scripts\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\EnemyFollow.cs" />
-     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
-     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-     <Compile Include="Assets\Scripts\EnemyStop.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyAttack.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyFollow.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemySpawner.cs" />
+     <Compile Include="Assets\Scripts\Enemies\EnemyStop.cs" />
+     <Compile Include="Assets\Scripts\Enemies\SpawnEnemies.cs" />
+     <Compile Include="Assets\Scripts\Enemies\SpawnManager.cs" />
+     <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\GlobalControl.cs" />
      <Compile Include="Assets\Scripts\HealthSystem.cs" />
+     <Compile Include="Assets\Scripts\HeartItem.cs" />
      <Compile Include="Assets\Scripts\LoadScene.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\OptionsMenu.cs" />
@@ -81,10 +87,11 @@
      <Compile Include="Assets\Scripts\Rooms\RoomScript.cs" />
      <Compile Include="Assets\Scripts\Rooms\RoomSpawner.cs" />
      <Compile Include="Assets\Scripts\Rooms\RoomTemplates.cs" />
+     <Compile Include="Assets\Scripts\Skills\ShopManager.cs" />
      <Compile Include="Assets\Scripts\Skills\Skill.cs" />
      <Compile Include="Assets\Scripts\Skills\SkillButton.cs" />
      <Compile Include="Assets\Scripts\Skills\SkillManager.cs" />
-     <Compile Include="Assets\Scripts\SpawnEnemies.cs" />
+     <Compile Include="Assets\Scripts\TileChange.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
@@ -103,8 +110,17 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+ <Reference Include="Unity.2D.Animation.Runtime">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Editor">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.IK.Runtime">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
  <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
@@ -112,11 +128,29 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.InternalAPIEngineBridge.001">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Common.Runtime">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Animation.Editor">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Triangle.Runtime">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.2D.Triangle.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Common.Editor">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
  <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InternalAPIEditorBridge.001">
+ <HintPath>C:/Users/Josep/Desktop/Juegos y app/UnityProjects/Unity2D/Roguelike 2d JMJ Games/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2018.4.28f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

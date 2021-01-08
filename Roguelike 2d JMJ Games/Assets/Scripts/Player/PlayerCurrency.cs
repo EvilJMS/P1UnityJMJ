@@ -31,7 +31,7 @@ public class PlayerCurrency : MonoBehaviour
       GlobalControl.Instance.currentCurrency = currentCurrency;
     }
 
-    private void DisplayMoney(){
+    public void DisplayMoney(){
       currencyText.text = currentCurrency + "";
     }
 }

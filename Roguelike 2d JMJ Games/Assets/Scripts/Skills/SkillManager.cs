@@ -56,7 +56,7 @@ public class SkillManager : MonoBehaviour
     }
 
     private void DisplayMoney(){
-      currencyText.text = remainingCurrency + "";
+      player.GetComponent<PlayerCurrency>().DisplayMoney();
     }
 
     private void UpdateSkillImage(){
@@ -80,6 +80,7 @@ public class SkillManager : MonoBehaviour
       if (activateSkill.isBuyable==true&&remainingCurrency >= activateSkill.skillCost) {
         activateSkill.counter++;
         remainingCurrency-=activateSkill.skillCost;
+        player.GetComponent<PlayerCurrency>().currentCurrency=remainingCurrency;
         if (activateSkill.counter==activateSkill.timesBuyable) {
           activateSkill.isBuyable=false;
         }
