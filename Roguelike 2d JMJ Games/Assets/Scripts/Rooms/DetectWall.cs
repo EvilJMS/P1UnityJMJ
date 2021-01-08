@@ -15,7 +15,7 @@ public class DetectWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
     }
 
 
@@ -26,7 +26,6 @@ public class DetectWall : MonoBehaviour
      void OnTriggerStay2D(Collider2D other) {
        if (other.CompareTag("Wall")||other.CompareTag("ClosedWall")) {
          door.GetComponent<DoorScript>().touchingWall = true;
-         Debug.Log(door.tag);
        }
       }
 }
