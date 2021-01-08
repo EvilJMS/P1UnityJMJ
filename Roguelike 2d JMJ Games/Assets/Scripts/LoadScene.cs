@@ -11,6 +11,7 @@ public class LoadScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+      player = GameObject.FindGameObjectWithTag("Player");
       TutorialFromMenu = GlobalControl.Instance.TutorialFromMenu;
       if (TutorialFromMenu==true) {
         this.tag="GoBackToMenu";
@@ -42,6 +43,18 @@ public class LoadScene : MonoBehaviour
             player.GetComponent<PlayerMovement>().SaveData();
             player.GetComponent<HealthSystem>().SaveData();
             SceneManager.LoadScene(1);
+            break;
+          case "Level2":
+            player.GetComponent<PlayerCurrency>().SaveData();
+            player.GetComponent<PlayerMovement>().SaveData();
+            player.GetComponent<HealthSystem>().SaveData();
+            SceneManager.LoadScene(5);
+            break;
+          case "Level3":
+            player.GetComponent<PlayerCurrency>().SaveData();
+            player.GetComponent<PlayerMovement>().SaveData();
+            player.GetComponent<HealthSystem>().SaveData();
+            SceneManager.LoadScene(6);
             break;
           case "GoToHub":
             player.GetComponent<PlayerMovement>().SaveData();

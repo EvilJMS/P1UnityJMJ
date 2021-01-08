@@ -22,7 +22,9 @@ public class SpawnEnemies : MonoBehaviour
     public void Spawn(){
       if (Room.tag=="BossRoom") {
         GameObject newObject = Instantiate(boss, transform.position, Quaternion.identity) as GameObject;
-        // newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
+        newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
+        newObject.transform.parent = Room.transform;
+        Room.GetComponent<RoomScript>().addEnemy();
       } else{
         GameObject newObject = Instantiate(enemy, transform.position, Quaternion.identity) as GameObject;
         newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;

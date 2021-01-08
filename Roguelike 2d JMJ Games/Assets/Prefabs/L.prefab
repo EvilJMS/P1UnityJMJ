@@ -8349,6 +8349,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4042754870233708}
     m_Modifications:
+    - target: {fileID: 3624744318883359177, guid: a7ef5a549886ae185835809e236ab1d7,
+        type: 3}
+      propertyPath: cameras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3624744318883359177, guid: a7ef5a549886ae185835809e236ab1d7,
+        type: 3}
+      propertyPath: cameras.Array.data[0]
+      value: 
+      objectReference: {fileID: 4588708936104440127}
     - target: {fileID: 5907960544689505916, guid: a7ef5a549886ae185835809e236ab1d7,
         type: 3}
       propertyPath: on
@@ -8416,15 +8426,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7ef5a549886ae185835809e236ab1d7, type: 3}
---- !u!1 &4503876962331326050 stripped
+--- !u!1 &4588708936104440127 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 7782296389332523223, guid: a7ef5a549886ae185835809e236ab1d7,
+  m_CorrespondingSourceObject: {fileID: 7867479716691763082, guid: a7ef5a549886ae185835809e236ab1d7,
     type: 3}
   m_PrefabInstance: {fileID: 5944955370851708597}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &4115418918145482757 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7754176952592846512, guid: a7ef5a549886ae185835809e236ab1d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5944955370851708597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4503876962331326050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7782296389332523223, guid: a7ef5a549886ae185835809e236ab1d7,
     type: 3}
   m_PrefabInstance: {fileID: 5944955370851708597}
   m_PrefabAsset: {fileID: 0}

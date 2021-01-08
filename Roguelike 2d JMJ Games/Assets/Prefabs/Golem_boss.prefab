@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 114112384084136438}
   m_Layer: 0
   m_Name: Golem_boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -207,6 +207,9 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 10
   lootDrop: []
+  changeScene: {fileID: 4109983240117935386, guid: 24e540b9584572f4280811155ed2c604,
+    type: 3}
+  player: {fileID: 0}
 --- !u!1 &200697568345555554
 GameObject:
   m_ObjectHideFlags: 0
