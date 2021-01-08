@@ -39,6 +39,7 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(0);
             break;
           case "Level1":
+            skill.GetComponent<Skill>().SaveData();
             player.GetComponent<PlayerCurrency>().SaveData();
             player.GetComponent<PlayerMovement>().SaveData();
             player.GetComponent<HealthSystem>().SaveData();
@@ -56,11 +57,15 @@ public class LoadScene : MonoBehaviour
             player.GetComponent<HealthSystem>().SaveData();
             SceneManager.LoadScene(6);
             break;
+          case "WinScreen":
+            player.GetComponent<PlayerCurrency>().SaveData();
+            player.GetComponent<PlayerMovement>().SaveData();
+            SceneManager.LoadScene(7);
+            break;
           case "GoToHub":
             player.GetComponent<PlayerMovement>().SaveData();
             SceneManager.LoadScene(3);
             break;
-
         }
       }
     }

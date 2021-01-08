@@ -29,14 +29,17 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
           if (this.tag=="Boss") {
-            Destroy(gameObject);
             GameObject newObject = Instantiate(changeScene, transform.position, Quaternion.identity) as GameObject;
             if (SceneManager.GetActiveScene().name=="NIvel1") {
-              newObject.tag="Level2";
+              newObject.transform.tag="Level2";
             } else if (SceneManager.GetActiveScene().name=="Nivel2") {
-              newObject.tag="Level3";
+              newObject.transform.tag="Level3";
+            } else if (SceneManager.GetActiveScene().name=="Nivel3") {
+              Debug.Log("Esto Funciona");
+              newObject.transform.tag="WinScreen";
             }
             player.GetComponent<PlayerCurrency>().EarnMoney(50);
+            Destroy(gameObject);
 
           } else{
             Destroy(gameObject);

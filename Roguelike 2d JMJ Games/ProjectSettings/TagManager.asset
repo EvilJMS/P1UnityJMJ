@@ -35,6 +35,7 @@ TagManager:
   - SpawnManager
   - Boss
   - Level3
+  - WinScreen
   layers:
   - Default
   - TransparentFX
