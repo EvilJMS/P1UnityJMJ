@@ -35,7 +35,6 @@ public class EnemyHealth : MonoBehaviour
             } else if (SceneManager.GetActiveScene().name=="Nivel2") {
               newObject.transform.tag="Level3";
             } else if (SceneManager.GetActiveScene().name=="Nivel3") {
-              Debug.Log("Esto Funciona");
               newObject.transform.tag="WinScreen";
             }
             player.GetComponent<PlayerCurrency>().EarnMoney(50);

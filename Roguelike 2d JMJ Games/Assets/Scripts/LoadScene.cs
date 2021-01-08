@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
   public GameObject player;
-  public GameObject skill;
+  public GameObject[] skillList;
   public bool TutorialFromMenu;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,9 @@ public class LoadScene : MonoBehaviour
       if (other.CompareTag("Player")){
         switch(this.tag){
           case "EnterTutorial":
+          foreach (GameObject skill in skillList) {
             skill.GetComponent<Skill>().SaveData();
+          }
             player.GetComponent<PlayerCurrency>().SaveData();
             player.GetComponent<PlayerMovement>().SaveData();
             player.GetComponent<HealthSystem>().SaveData();
@@ -39,7 +41,9 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(0);
             break;
           case "Level1":
-            skill.GetComponent<Skill>().SaveData();
+            foreach (GameObject skill in skillList) {
+              skill.GetComponent<Skill>().SaveData();
+            }
             player.GetComponent<PlayerCurrency>().SaveData();
             player.GetComponent<PlayerMovement>().SaveData();
             player.GetComponent<HealthSystem>().SaveData();
