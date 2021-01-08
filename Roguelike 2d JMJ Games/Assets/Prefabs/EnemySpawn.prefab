@@ -73,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySpawn: 0
   spawner: {fileID: 7766369704103049161}
+  manager: {fileID: 0}
 --- !u!1 &7766369704103049161
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,3 +119,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 7932042139643993521, guid: 46740cefe4446a74a9360dffb1962058, type: 3}
   Room: {fileID: 0}
+  boss: {fileID: 101753075845197403, guid: 01058d836884fd0488ccfc72c9a415ec, type: 3}

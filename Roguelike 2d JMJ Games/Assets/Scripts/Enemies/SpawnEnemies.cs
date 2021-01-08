@@ -6,6 +6,7 @@ public class SpawnEnemies : MonoBehaviour
 {
   public GameObject enemy;
   public GameObject Room;
+  public GameObject boss;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,8 @@ public class SpawnEnemies : MonoBehaviour
 
     public void Spawn(){
       if (Room.tag=="BossRoom") {
-        Debug.Log("Llenar esto para spawnear boss");
+        GameObject newObject = Instantiate(boss, transform.position, Quaternion.identity) as GameObject;
+        // newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
       } else{
         GameObject newObject = Instantiate(enemy, transform.position, Quaternion.identity) as GameObject;
         newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
