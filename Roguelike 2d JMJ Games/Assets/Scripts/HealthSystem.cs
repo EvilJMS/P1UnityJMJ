@@ -69,7 +69,10 @@ public class HealthSystem : MonoBehaviour
 
     public void EarnHealth(int heart)
     {
-          vida+=heart;
+          if (vida!=numCorazones) {
+            vida+=heart;
+          }
+          DibujarCorazones();
     }
 
     public void SaveData(){
