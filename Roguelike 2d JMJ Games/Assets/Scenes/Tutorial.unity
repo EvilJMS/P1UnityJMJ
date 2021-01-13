@@ -698,6 +698,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 384167953}
+    - target: {fileID: 1266614087137088523, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3f2722971209ff4597a61d9d67ff284,
+        type: 3}
     - target: {fileID: 1540252733301279161, guid: 7bb9a823d5b4e0349928e295f7be08d0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -807,6 +813,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VidaPersonaje
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072412911376401450, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_Text
+      value: '  New Text'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534692798578658356, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3f2722971209ff4597a61d9d67ff284,
+        type: 3}
+    - target: {fileID: 6534692798578658356, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534692798578658356, guid: 7bb9a823d5b4e0349928e295f7be08d0,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bb9a823d5b4e0349928e295f7be08d0, type: 3}
@@ -922,9 +949,9 @@ MonoBehaviour:
   dialogue:
     name: Fantasma
     sentences:
-    - En este templo te encontraras muchos enemigos.
-    - Al aparecer se cerraran las puertas.
-    - Eliminalos a todos usando las flechas de direccion para abrir las puertas.
+    - '  En este templo te encontraras muchos enemigos.'
+    - '  Al aparecer se cerraran las puertas.'
+    - '  Eliminalos a todos usando las flechas de direccion para abrir las puertas.'
   endConversation: 0
 --- !u!61 &857902690
 BoxCollider2D:
@@ -1866,7 +1893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1359347612}
-  skill: {fileID: 0}
+  skillList: []
   TutorialFromMenu: 0
 --- !u!61 &1784015267
 BoxCollider2D:
