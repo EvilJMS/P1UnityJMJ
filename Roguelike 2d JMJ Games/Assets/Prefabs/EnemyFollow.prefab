@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7932042139643993487}
   - component: {fileID: 7932042139643993486}
   - component: {fileID: 1162178436}
+  - component: {fileID: 7511289333602660243}
   m_Layer: 0
   m_Name: EnemyFollow
   m_TagString: Enemy
@@ -154,3 +155,22 @@ MonoBehaviour:
   - {fileID: 4394898511137856624, guid: fa80a21d92683b142bf92a705189742c, type: 3}
   changeScene: {fileID: 0}
   player: {fileID: 0}
+--- !u!95 &7511289333602660243
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7932042139643993521}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ea2587673418df232ba546ec553eba5c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
