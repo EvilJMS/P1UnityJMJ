@@ -44,7 +44,7 @@ public class LoadScene : MonoBehaviour
             foreach (GameObject skill in skillList) {
               skill.GetComponent<Skill>().SaveData();
             }
-            player.GetComponent<PlayerCurrency>().SaveData();
+            player.GetComponent<PlayerCurrency>().ResetMoney();
             player.GetComponent<PlayerMovement>().SaveData();
             player.GetComponent<HealthSystem>().SaveData();
             SceneManager.LoadScene(1);
