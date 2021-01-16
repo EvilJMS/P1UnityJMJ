@@ -13,6 +13,7 @@ public class GlobalControl : MonoBehaviour
     public float fireDelay;
     public int currentCurrency;
     public bool TutorialFromMenu;
+    public bool hubEntered;
     public int damage;
     public List<int> counterList;
     public List<int> priceList;
