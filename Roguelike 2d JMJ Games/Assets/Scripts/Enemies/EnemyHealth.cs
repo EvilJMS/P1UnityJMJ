@@ -19,8 +19,17 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         Room = transform.parent.gameObject;
-        currentHealth = maxHealth;
         player = GameObject.FindGameObjectWithTag("Player");
+        if (this.tag=="Boss") {
+          if (SceneManager.GetActiveScene().name=="NIvel1") {
+            maxHealth = 10;
+          } else if (SceneManager.GetActiveScene().name=="Nivel2") {
+            maxHealth = 15;
+          } else if (SceneManager.GetActiveScene().name=="Nivel3") {
+            maxHealth = 20;
+          }
+        }
+        currentHealth = maxHealth;
     }
 
 
