@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SkillButton : MonoBehaviour
 {
     public Animator animator;
     public Image skillImage;
-    public TMPro.TextMeshProUGUI skillNameText;
-    public TMPro.TextMeshProUGUI skillDesText;
-    public TMPro.TextMeshProUGUI skillCostText;
+    public TextMeshProUGUI skillNameText;
+    public TextMeshProUGUI skillDesText;
+    public TextMeshProUGUI skillCostText;
 
     public int skillButtonID;
 
