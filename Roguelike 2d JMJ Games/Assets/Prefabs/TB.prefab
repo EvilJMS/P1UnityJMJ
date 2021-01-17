@@ -8557,6 +8557,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7085959113276416568}
     m_Modifications:
+    - target: {fileID: 1747857066982191058, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
+        type: 3}
+      propertyPath: Room
+      value: 
+      objectReference: {fileID: 1974744948600924}
+    - target: {fileID: 2578787952677150930, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
+        type: 3}
+      propertyPath: Room
+      value: 
+      objectReference: {fileID: 1974744948600924}
     - target: {fileID: 7766369704030186412, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
         type: 3}
       propertyPath: m_Name
@@ -8770,6 +8780,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7085959113276416568}
     m_Modifications:
+    - target: {fileID: 1747857066982191058, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
+        type: 3}
+      propertyPath: Room
+      value: 
+      objectReference: {fileID: 1974744948600924}
+    - target: {fileID: 2578787952677150930, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
+        type: 3}
+      propertyPath: Room
+      value: 
+      objectReference: {fileID: 1974744948600924}
     - target: {fileID: 7766369704030186412, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
         type: 3}
       propertyPath: m_Name
