@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
   public GameObject[] spawner;
   public GameObject manager;
   private int rand;
+  public GameObject Room;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,16 @@ public class EnemySpawner : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
       if (other.CompareTag("Player")) {
         if (enemySpawn == false) {
-          for (int i = 0; i<rand; i++) {
-            spawner[i].GetComponent<SpawnEnemies>().Spawn();
+          if (Room.tag=="BossRoom") {
+            spawner[0].GetComponent<SpawnEnemies>().Spawn();
+          } else{
+            if (rand==0) {
+              spawner[0].GetComponent<SpawnEnemies>().Spawn();
+            } else{
+              for (int i = 0; i<rand; i++) {
+                spawner[i].GetComponent<SpawnEnemies>().Spawn();
+              }
+            }
           }
           if (this.transform.parent.CompareTag("SpawnManager")) {
             manager.GetComponent<SpawnManager>().turnOff();

@@ -8624,6 +8624,11 @@ PrefabInstance:
       propertyPath: enemySpawn
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7766369704030186414, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
+        type: 3}
+      propertyPath: Room
+      value: 
+      objectReference: {fileID: 1982205314345556}
     - target: {fileID: 7766369704103049163, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
         type: 3}
       propertyPath: Room
@@ -8944,6 +8949,11 @@ PrefabInstance:
       propertyPath: enemySpawn
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7766369704030186414, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
+        type: 3}
+      propertyPath: Room
+      value: 
+      objectReference: {fileID: 1982205314345556}
     - target: {fileID: 7766369704103049163, guid: 2d39ef9733ecfe04096dc1bb1ff05062,
         type: 3}
       propertyPath: Room
