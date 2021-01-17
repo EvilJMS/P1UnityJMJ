@@ -7,9 +7,9 @@ public class SkillButton : MonoBehaviour
 {
     public Animator animator;
     public Image skillImage;
-    public Text skillNameText;
-    public Text skillDesText;
-    public Text skillCostText;
+    public TMPro.TextMeshProUGUI skillNameText;
+    public TMPro.TextMeshProUGUI skillDesText;
+    public TMPro.TextMeshProUGUI skillCostText;
 
     public int skillButtonID;
 
