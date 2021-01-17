@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DialogueNPC : MonoBehaviour
 {
     public Dialogue dialogue;
     public bool endConversation;
+
+    void Start(){
+      if (SceneManager.GetActiveScene().name=="Hub"){
+        endConversation=GlobalControl.Instance.hubEntered;
+      }
+    }
 
     public void TriggerDialogue(){
       FindObjectOfType<DialogManager>().StartDialogue(dialogue);
@@ -18,6 +25,9 @@ public class DialogueNPC : MonoBehaviour
         }
         if (endConversation==false) {
           endConversation=true;
+          if (SceneManager.GetActiveScene().name=="Hub"){
+            GlobalControl.Instance.hubEntered=endConversation;
+          }
           TriggerDialogue();
       }
     }
