@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
-    public Text nametext;
-    public Text dialogueText;
+    public TMPro.TextMeshProUGUI nametext;
+    public TMPro.TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
     public SpawnEnemies spawn;
     public bool isSpawner;
