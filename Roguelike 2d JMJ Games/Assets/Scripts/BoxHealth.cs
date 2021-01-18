@@ -33,6 +33,7 @@ public class BoxHealth : MonoBehaviour
             GetComponent<BoxCollider2D>().enabled = false;
             GetComponent<SpriteRenderer>().sprite = Broken;
             Instantiate(lootDrop, transform.position, Quaternion.identity);
+            
         } else
         {
             GetComponent<BoxCollider2D>().enabled = true;
