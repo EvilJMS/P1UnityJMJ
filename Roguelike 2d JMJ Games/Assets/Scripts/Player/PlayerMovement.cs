@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     public Animator animator;
     public bool canMove=true;
+    public AudioSource gunShoot;
 
     public GameObject bulletPrefab;
     public float BulletSpeed;
@@ -37,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
       animator.SetFloat("Vertical", movement.y);
       animator.SetFloat("Speed", movement.sqrMagnitude);
       if ((shootHor!=0 || shootVer!=0)&& Time.time > lastFired + fireDelay) {
+        gunShoot.Play();
         Shoot(shootHor,shootVer);
         lastFired = Time.time;
       }
