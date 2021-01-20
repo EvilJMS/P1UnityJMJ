@@ -39,6 +39,12 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collider.gameObject.CompareTag("Box"))
+        {
+            collider.gameObject.GetComponent<BoxHealth>().LowHP(damage);
+            Destroy(gameObject);
+        }
+
 
     }
 
