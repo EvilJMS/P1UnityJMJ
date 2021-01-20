@@ -5,20 +5,38 @@ using UnityEngine;
 public class MovementProyectil : MonoBehaviour
 {
     public float speed;
+    public int damage;
 
     private Transform player;
     private Vector2 target;
+    private Rigidbody2D proyectilRB; 
     
     void Start()
     {
+        proyectilRB = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        target = new Vector2(player.position.x, player.position.y);
+        target = (player.transform.position - transform.position).normalized * speed;
+        proyectilRB.velocity = new Vector2(target.x, target.y);
     }
 
-    
-    void Update()
+   
+
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);    
+        if (collider.gameObject.CompareTag("Wall") || collider.gameObject.CompareTag("Door"))
+        {
+            Destroy(gameObject);
+        }
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            collider.gameObject.GetComponent<HealthSystem>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
+
+    public void SaveData()
+    {
+        GlobalControl.Instance.damage = damage;
     }
 }

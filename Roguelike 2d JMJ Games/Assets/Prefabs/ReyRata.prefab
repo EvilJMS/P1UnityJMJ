@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3119414541547896596}
   - component: {fileID: 7858812420432661833}
   - component: {fileID: 4021720899687948401}
+  - component: {fileID: 187882239203245647}
   m_Layer: 0
   m_Name: ReyRata
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  currentHealth: 0
-  lootDrop: []
+  currentHealth: 5
+  lootDrop:
+  - {fileID: 4394898511137856624, guid: baeaae4c1a6a9c54bb6d0de57b053aab, type: 3}
   changeScene: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &7858812420432661833
@@ -131,3 +133,19 @@ MonoBehaviour:
   startTimeBtwShots: 1
   proyectil: {fileID: 550825780095457151, guid: 9eeca773b3581df4aa45dad21149494a,
     type: 3}
+--- !u!70 &187882239203245647
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3214908175692566187}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.12714481}
+  m_Size: {x: 0.5, y: 0.7457104}
+  m_Direction: 0
