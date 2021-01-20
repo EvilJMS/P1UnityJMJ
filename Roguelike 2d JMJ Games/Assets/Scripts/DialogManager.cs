@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class DialogManager : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI nametext;
-    public TMPro.TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI nametext;
+    public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
     public SpawnEnemies spawn;
     public bool isSpawner;
