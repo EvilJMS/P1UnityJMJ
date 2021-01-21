@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8624035545524831422}
   - component: {fileID: 798125744647217278}
   - component: {fileID: 114112384084136438}
+  - component: {fileID: 1234068897240395520}
   m_Layer: 0
   m_Name: Golem_boss
   m_TagString: Boss
@@ -210,6 +211,21 @@ MonoBehaviour:
   changeScene: {fileID: 4109983240117935386, guid: 24e540b9584572f4280811155ed2c604,
     type: 3}
   player: {fileID: 0}
+--- !u!114 &1234068897240395520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101753075845197403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07ca3f2b85e9ac4bb8b3d4c533d8d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwShots: 2
+  proyectil: {fileID: 2586987433820428121, guid: 5148135d317a9f74aa305aa00875a72a,
+    type: 3}
 --- !u!1 &200697568345555554
 GameObject:
   m_ObjectHideFlags: 0
