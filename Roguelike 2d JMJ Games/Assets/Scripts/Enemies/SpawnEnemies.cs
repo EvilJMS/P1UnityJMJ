@@ -11,7 +11,7 @@ public class SpawnEnemies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      rand = Random.Range(0,3);
+      rand = Random.Range(0,4);
     }
 
     // Update is called once per frame

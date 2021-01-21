@@ -46,7 +46,8 @@ MonoBehaviour:
   enemy:
   - {fileID: 7932042139643993521, guid: 46740cefe4446a74a9360dffb1962058, type: 3}
   - {fileID: 6588153624808096686, guid: 0f18f8b380a680d4b8ce12aaaaa24b8e, type: 3}
-  - {fileID: 6588153624808096686, guid: 0f18f8b380a680d4b8ce12aaaaa24b8e, type: 3}
+  - {fileID: 2326585537293871476, guid: 3697b0b89ff1c024facd0e47a429fe8d, type: 3}
+  - {fileID: 3214908175692566187, guid: 283ddc641d5ec6b44ba45d908c648cd7, type: 3}
   Room: {fileID: 0}
   boss: {fileID: 101753075845197403, guid: 01058d836884fd0488ccfc72c9a415ec, type: 3}
 --- !u!1 &7766369704030186412
@@ -128,6 +129,7 @@ MonoBehaviour:
   - {fileID: 8553480052210041168}
   - {fileID: 5459137146838867306}
   manager: {fileID: 0}
+  Room: {fileID: 0}
 --- !u!1 &7766369704103049161
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +176,8 @@ MonoBehaviour:
   enemy:
   - {fileID: 7932042139643993521, guid: 46740cefe4446a74a9360dffb1962058, type: 3}
   - {fileID: 6588153624808096686, guid: 0f18f8b380a680d4b8ce12aaaaa24b8e, type: 3}
-  - {fileID: 6588153624808096686, guid: 0f18f8b380a680d4b8ce12aaaaa24b8e, type: 3}
+  - {fileID: 2326585537293871476, guid: 3697b0b89ff1c024facd0e47a429fe8d, type: 3}
+  - {fileID: 3214908175692566187, guid: 283ddc641d5ec6b44ba45d908c648cd7, type: 3}
   Room: {fileID: 0}
   boss: {fileID: 101753075845197403, guid: 01058d836884fd0488ccfc72c9a415ec, type: 3}
 --- !u!1 &8553480052210041168
@@ -223,6 +226,7 @@ MonoBehaviour:
   enemy:
   - {fileID: 7932042139643993521, guid: 46740cefe4446a74a9360dffb1962058, type: 3}
   - {fileID: 6588153624808096686, guid: 0f18f8b380a680d4b8ce12aaaaa24b8e, type: 3}
-  - {fileID: 6588153624808096686, guid: 0f18f8b380a680d4b8ce12aaaaa24b8e, type: 3}
+  - {fileID: 2326585537293871476, guid: 3697b0b89ff1c024facd0e47a429fe8d, type: 3}
+  - {fileID: 3214908175692566187, guid: 283ddc641d5ec6b44ba45d908c648cd7, type: 3}
   Room: {fileID: 0}
   boss: {fileID: 101753075845197403, guid: 01058d836884fd0488ccfc72c9a415ec, type: 3}
