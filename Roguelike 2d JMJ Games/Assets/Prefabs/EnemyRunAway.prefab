@@ -14,6 +14,9 @@ GameObject:
   - component: {fileID: 2326585537293871478}
   - component: {fileID: 3357007491501134691}
   - component: {fileID: 2326585537293871477}
+  - component: {fileID: 114013308386868778}
+  - component: {fileID: 114136070344172964}
+  - component: {fileID: 4709460438324582647}
   m_Layer: 0
   m_Name: EnemyRunAway
   m_TagString: Enemy
@@ -158,3 +161,51 @@ MonoBehaviour:
   runAwayDistance: 4
   player: {fileID: 0}
   enemyFollow: {fileID: 0}
+--- !u!114 &114013308386868778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326585537293871476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97bd20891c0ed1d4ca69aef596e96ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114136070344172964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326585537293871476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d07ca3f2b85e9ac4bb8b3d4c533d8d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBtwShots: 1
+  proyectil: {fileID: 1808048128167085249, guid: 0ec326e2a204d4748999d94ff57785f5,
+    type: 3}
+--- !u!50 &4709460438324582647
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2326585537293871476}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

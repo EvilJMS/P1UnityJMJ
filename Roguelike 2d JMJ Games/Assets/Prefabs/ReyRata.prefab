@@ -99,6 +99,7 @@ MonoBehaviour:
   currentHealth: 5
   lootDrop:
   - {fileID: 4394898511137856624, guid: baeaae4c1a6a9c54bb6d0de57b053aab, type: 3}
+  - {fileID: 4394898511137856624, guid: baeaae4c1a6a9c54bb6d0de57b053aab, type: 3}
   changeScene: {fileID: 0}
   player: {fileID: 0}
 --- !u!114 &7858812420432661833

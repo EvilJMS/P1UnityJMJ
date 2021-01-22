@@ -738,11 +738,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 10
   numCorazones: 5
-  moveSpeed: 10
+  moveSpeed: 7
   BulletSpeed: 7.5
   fireDelay: 0.5
   currentCurrency: 0
   TutorialFromMenu: 0
+  hubEntered: 0
   damage: 1
   counterList: 00000000000000000000000000000000
   priceList: 1e000000320000001400000032000000
