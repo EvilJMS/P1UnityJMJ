@@ -19,7 +19,7 @@ public class MovementProyectil : MonoBehaviour
         target = (player.transform.position - transform.position).normalized * speed;
         proyectilRB.velocity = new Vector2(target.x, target.y);
 
-        Destroy(gameObject, 4);
+        Destroy(this.gameObject, 4);
     }
 
    
