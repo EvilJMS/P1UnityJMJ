@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnEnemies : MonoBehaviour
 {
@@ -26,7 +27,13 @@ public class SpawnEnemies : MonoBehaviour
         newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
         newObject.transform.parent = Room.transform;
         Room.GetComponent<RoomScript>().addEnemy();
-      } else{
+      } else if (SceneManager.GetActiveScene().name=="Tutorial") {
+        GameObject newObject = Instantiate(enemy[0], transform.position, Quaternion.identity) as GameObject;
+        newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
+        newObject.transform.parent = Room.transform;
+        Room.GetComponent<RoomScript>().addEnemy();
+      }
+       else{
         GameObject newObject = Instantiate(enemy[rand], transform.position, Quaternion.identity) as GameObject;
         newObject.GetComponent<EnemyHealth>().currentHealth = newObject.GetComponent<EnemyHealth>().maxHealth;
         newObject.transform.parent = Room.transform;
